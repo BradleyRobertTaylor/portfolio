@@ -1,0 +1,69 @@
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.container {
+  /* padding-top: 5em; */
+  /* margin-inline: 5% auto 5%; */
+  margin-inline: auto;
+  margin: 0 5%;
+}
+
+.name {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 0.5em;
+}
+
+.typewriter {
+  font-weight: 500;
+}
+
+.down-arrow {
+  border: none;
+  background-color: var(--primary-purple);
+  box-shadow: 0 0 4rem #00000059;
+  padding: 1em;
+  width: 80px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.down-arrow svg {
+  width: 30px;
+  fill: white;
+}
+
+.button-text {
+  display: block;
+  margin-bottom: 1em;
+}
+
+.intro {
+  margin-top: 4em;
+  text-align: left;
+  line-height: 1.5em;
+}
+
+@media (max-width: 50em) {
+  .hero {
+    justify-content: space-between;
+    padding-bottom: 1em;
+  }
+
+  .container {
+    padding-top: 10em;
+  }
+
+  .name {
+    font-size: 10vw;
+  }
+}
