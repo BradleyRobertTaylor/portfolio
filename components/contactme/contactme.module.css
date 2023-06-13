@@ -1,0 +1,43 @@
+.contact-me-section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 5%;
+  /* background-color: var(--secondary-white); */
+}
+
+.intro {
+  text-align: center;
+  font-size: 4rem;
+  color: var(--primary-purple);
+  margin-bottom: 0.5em;
+}
+
+.title {
+  font-size: 2rem;
+  text-align: center;
+  color: var(--primary-black);
+  margin-bottom: 0.7em;
+}
+
+.message {
+  /* color: #e2e0e0; */
+  color: var(--primary-black);
+  font-weight: 500;
+}
+
+.button {
+  font: inherit;
+  display: block;
+  width: fit-content;
+  margin-top: 4em;
+  margin-inline: auto;
+  border: none;
+  box-shadow: 0 0 4rem #00000059;
+  background-color: var(--primary-green);
+  color: #161618;
+  font-weight: 600;
+  border-radius: 3em;
+  padding: 1.4em 2em;
+}

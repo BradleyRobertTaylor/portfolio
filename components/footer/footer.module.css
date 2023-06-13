@@ -1,0 +1,39 @@
+.logo div:last-child {
+  font-size: 0.6em;
+  letter-spacing: 0.4em;
+}
+
+.logo {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+}
+
+.logo div:last-child {
+  font-size: 0.6em;
+  letter-spacing: 0.4em;
+}
+
+.purple {
+  color: var(--primary-purple);
+}
+
+.logo .made {
+  font-weight: 400;
+}
+
+.upside-down {
+  display: inline-block;
+  transform: rotateX(180deg) translateY(0.05rem);
+}
+
+.letter-spacing {
+  letter-spacing: -0.06rem;
+}
+
+.not-bold {
+  font-weight: 400;
+  letter-spacing: 0.03em;
+}

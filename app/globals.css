@@ -2,21 +2,35 @@
 ::after,
 * {
   box-sizing: border-box;
+  scroll-behavior: smooth !important;
 }
 
 :root {
-  /* --primary-green: #2bae66; */
   --primary-purple: #502cde;
-  --primary-background-white: #f5f5f5;
-  --primary-background-black: #161618;
+  /* --primary-white: #f5f5f5; */
+  --primary-white: #e2e0e0;
+  --secondary-white: #d4d4d4;
+  --primary-black: #161618;
+  --primary-green: #a3d9a3;
+  --primary-logo: #502cde;
+}
+
+[data-theme='dark'] {
+  --primary-white: #161618;
+  --secondary-white: #161618;
+  /* --primary-black: #f5f5f5; */
+  /* --primary-green: #9dde16; */
+  --primary-green: #9dde16;
+  --primary-black: #e2e0e0;
+  --primary-logo: #e2e0e0;
 }
 
 html,
 body {
   overflow-x: hidden;
   font-size: 16px;
-  background-color: var(--primary-background-white);
-  color: var(--primary-background-black);
+  background-color: var(--primary-white);
+  color: var(--primary-black);
 }
 
 h1,
@@ -37,14 +51,8 @@ a {
 }
 
 .highlight {
-  /* background-color: rgb(43, 174, 102, 0.6); */
-  background-color: #9dde16;
+  background-color: var(--primary-green);
+  font-weight: 600;
   padding-inline: 0.2em;
+  color: #161618;
 }
-
-/*
-Dark styles
-  background-color: rgb(22, 22, 24);
-  color: var(--primary-background-white);
-
-*/

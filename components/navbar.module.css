@@ -2,10 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /* background-color: black; */
-  /* backdrop-filter: blur(10px);
-  position: relative; */
-  background-color: var(--primary-background-white);
+  background-color: var(--primary-white);
   padding: 0.5em 1em;
   position: fixed;
   width: 100%;
@@ -14,21 +11,28 @@
 
 .logo {
   text-transform: uppercase;
-  font-size: 1.5rem;
+  text-align: center;
+  font-size: 1rem;
   font-weight: 800;
   letter-spacing: 0.1em;
-  color: var(--primary-purple);
+}
+
+.purple {
+  color: var(--primary-logo);
 }
 
 .logo .made {
   font-weight: 400;
-  /* color: var(--primary-purple); */
-  color: black;
+}
+
+.logo svg {
+  fill: var(--primary-logo);
+  width: 50px;
 }
 
 .upside-down {
   display: inline-block;
-  transform: rotateX(180deg);
+  transform: rotateX(180deg) translateY(0.05rem);
 }
 
 .letter-spacing {
@@ -37,6 +41,7 @@
 
 .not-bold {
   font-weight: 400;
+  letter-spacing: 0.03em;
 }
 
 .primary-navigation ul {
@@ -70,9 +75,9 @@
     justify-content: center;
     gap: 0.2em;
     font-size: 2rem;
-    background-color: var(--primary-background-white);
-    color: black;
+    color: var(--primary-black);
     padding: 1em;
+    background-color: var(--primary-white);
   }
 
   .nav-list li {
@@ -88,10 +93,7 @@
     border: none;
     border-radius: 50%;
     aspect-ratio: 1;
-  }
-
-  .hamburger-button {
-    fill: #000;
+    fill: var(--primary-black);
   }
 
   .hamburger-button svg {
