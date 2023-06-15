@@ -1,0 +1,22 @@
+.hamburger-button {
+  display: none;
+}
+
+@media (max-width: 50em) {
+  .hamburger-button {
+    display: block;
+    position: fixed;
+    top: 1.5rem;
+    right: 0.7rem;
+    z-index: 1000;
+    background: transparent;
+    border: none;
+    border-radius: 50%;
+    aspect-ratio: 1;
+    fill: var(--primary-black);
+  }
+
+  .hamburger-button svg {
+    width: 30px;
+  }
+}

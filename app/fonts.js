@@ -1,10 +1,4 @@
-import {
-  Roboto_Mono,
-  Poppins,
-  Space_Mono,
-  Space_Grotesk,
-  Inter,
-} from 'next/font/google';
+import { Roboto_Mono, Poppins, Space_Grotesk, Inter } from 'next/font/google';
 
 export const roboto_mono = Roboto_Mono({
   subsets: ['latin'],
@@ -29,12 +23,5 @@ export const poppins = Poppins({
   variable: '--font-poppins',
   style: ['normal', 'italic'],
   weight: ['200', '400', '600', '700', '800'],
-  display: 'swap',
-});
-
-export const space_mono = Space_Mono({
-  subsets: ['latin'],
-  variable: '--font-space-mono',
-  weight: ['400', '700'],
   display: 'swap',
 });

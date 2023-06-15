@@ -13,6 +13,9 @@
   --primary-black: #161618;
   --primary-green: #a3d9a3;
   --primary-logo: #502cde;
+  --background-color: #f1f5f9;
+  --nav-background-color: #502cde;
+  --nav-font-color: #e2e0e0;
 }
 
 [data-theme='dark'] {
@@ -22,16 +25,24 @@
   /* --primary-green: #9dde16; */
   --primary-green: #9dde16;
   --primary-black: #e2e0e0;
-  --primary-logo: #e2e0e0;
+  --primary-logo: white;
+  --background-color: #1f1f1f;
+  --nav-background-color: #161618;
+  --nav-text-color: #e2e0e0;
 }
 
 html,
 body {
   overflow-x: hidden;
   font-size: 16px;
-  background-color: var(--primary-white);
+  background-color: var(--background-color);
   color: var(--primary-black);
+  overscroll-behavior: none;
 }
+
+/* body {
+  position: relative;
+} */
 
 h1,
 h2,

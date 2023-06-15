@@ -1,7 +1,7 @@
 import './globals.css';
 import { inter } from './fonts';
 
-import Navbar from '@/components/navbar';
+import MainNavigation from '@/components/navigation/MainNavigation';
 import Footer from '@/components/footer/footer';
 
 export const metadata = {
@@ -13,7 +13,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={inter.className}>
       <body data-theme="light">
-        <Navbar />
+        <MainNavigation />
         {children}
         <Footer />
       </body>

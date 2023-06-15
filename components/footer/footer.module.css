@@ -1,3 +1,23 @@
+.footer-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+}
+
+.contact-links-container {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.contact-links-container svg {
+  width: 30px;
+}
+
+/* ----------- Logo Styles ----------- */
+
 .logo div:last-child {
   font-size: 0.6em;
   letter-spacing: 0.4em;
