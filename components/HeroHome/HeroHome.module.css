@@ -1,0 +1,40 @@
+.hero {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  padding: 3em 1em 1em 1em;
+  /* background-image: url(../../public/ales-nesetril-Im7lZjxeLhg-unsplash.jpg); */
+  /* background-size: cover; */
+  /* background-position: center; */
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.title {
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 2.2px;
+  font-size: 1.2rem;
+  margin: 0;
+  text-align: right;
+}
+
+.title:first-of-type {
+  font-weight: 700;
+  font-size: 3rem;
+}
+
+.title:last-of-type {
+  margin-bottom: 1em;
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media (min-width: 50em) {
+  .hero {
+    padding: 3em 3em 10em;
+  }
+}

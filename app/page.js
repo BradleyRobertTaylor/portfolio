@@ -1,15 +1,17 @@
-import Hero from '../components/hero/hero';
-import AboutMe from '../components/aboutme/aboutme';
-import Skills from '../components/skills/skills';
-import Projects from '../components/projects/projects';
-import ContactMe from '../components/contactme/contactme';
-import ThemeToggle from '../components/themetoggle/themetoggle';
+import HeroHome from "@/components/HeroHome/HeroHome";
+import ContactMe from "@/components/contactme/contactme";
+import Footer from "@/components/footer/footer";
+import Projects from "@/components/projects/projects";
 
 export default function Home() {
   return (
-    <main>
-      <Hero />
-      <ContactMe />
-    </main>
+    <div className="body-container">
+      <main>
+        <HeroHome />
+        <Projects />
+        <ContactMe />
+        <Footer />
+      </main>
+    </div>
   );
 }

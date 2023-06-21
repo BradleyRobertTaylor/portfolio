@@ -1,34 +1,11 @@
 .logo {
   text-transform: uppercase;
   text-align: center;
-  font-size: 1rem;
-  font-weight: 800;
+  font-size: 1.3rem;
   letter-spacing: 0.1em;
-}
-
-.purple {
-  color: var(--primary-logo);
-}
-
-.logo .made {
-  font-weight: 400;
 }
 
 .logo svg {
   fill: var(--primary-logo);
   width: 50px;
-}
-
-.upside-down {
-  display: inline-block;
-  transform: rotateX(180deg) translateY(0.05rem);
-}
-
-.letter-spacing {
-  letter-spacing: -0.06rem;
-}
-
-.not-bold {
-  font-weight: 400;
-  letter-spacing: 0.03em;
 }

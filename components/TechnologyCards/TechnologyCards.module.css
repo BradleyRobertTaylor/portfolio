@@ -1,0 +1,20 @@
+.technologies {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+}
+
+.technology-item {
+  font-size: 0.7rem;
+  /* background-color: #4d4d4d; */
+  /* background-color: #b39c36; */
+  background: rgb(112, 112, 112);
+  background: linear-gradient(
+    180deg,
+    rgba(112, 112, 112, 1) 0%,
+    rgba(48, 48, 48, 1) 100%
+  );
+  padding: 0.5em 1em;
+  border-radius: 5rem;
+}

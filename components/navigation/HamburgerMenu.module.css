@@ -6,17 +6,17 @@
   .hamburger-button {
     display: block;
     position: fixed;
-    top: 1.5rem;
+    top: 0.5rem;
     right: 0.7rem;
-    z-index: 1000;
+    z-index: 200;
     background: transparent;
     border: none;
     border-radius: 50%;
     aspect-ratio: 1;
-    fill: var(--primary-black);
+    fill: white;
   }
 
   .hamburger-button svg {
-    width: 30px;
+    width: 25px;
   }
 }

@@ -1,25 +1,18 @@
-'use client';
+"use client";
 
-import Link from 'next/link';
-import { useState } from 'react';
-// import { motion, useScroll, useMotionValueEvent } from 'framer-motion';
-import { AnimatePresence } from 'framer-motion';
-import HamburgerMenu from './HamburgerMenu';
-import MainHeader from './MainHeader';
+import { usePathname } from "next/navigation";
+import { useState, useEffect } from "react";
+import { AnimatePresence } from "framer-motion";
+import HamburgerMenu from "./HamburgerMenu";
+import MainHeader from "./MainHeader";
 
-import styles from './MainNavigation.module.css';
-import NavLinks from './NavLinks';
-import Logo from '../Logo/Logo';
-import SideDrawer from './SideDrawer';
+import styles from "./MainNavigation.module.css";
+import NavLinks from "./NavLinks";
+import Logo from "../Logo/Logo";
+import SideDrawer from "./SideDrawer";
+import Backdrop from "../Backdrop/Backdrop";
 
 export default function Navbar() {
-  // const { scrollYProgress } = useScroll();
-  // const [atTop, setAtTop] = useState(true);
-
-  // useMotionValueEvent(scrollYProgress, 'change', (latest) => {
-  //   latest === 0 ? setAtTop(true) : setAtTop(false);
-  // });
-
   const [drawerIsOpen, setDrawerIsOpen] = useState(false);
 
   const openDrawerHandler = () => {
@@ -29,7 +22,7 @@ export default function Navbar() {
       '[aria-controls="primary-navigation"]'
     );
 
-    hamburgerButton.setAttribute('aria-expanded', true);
+    hamburgerButton.setAttribute("aria-expanded", true);
   };
 
   const closeDrawerHandler = () => {
@@ -39,26 +32,41 @@ export default function Navbar() {
       '[aria-controls="primary-navigation"]'
     );
 
-    hamburgerButton.setAttribute('aria-expanded', false);
+    hamburgerButton.setAttribute("aria-expanded", false);
   };
+
+  const pathname = usePathname();
+
+  useEffect(() => {
+    if (drawerIsOpen) {
+      setDrawerIsOpen((state) => !state);
+    }
+  }, [pathname]);
 
   return (
     <>
       <AnimatePresence>
         {drawerIsOpen && (
-          <SideDrawer>
-            <nav className={styles['main-navigation-drawer-nav']}>
-              <NavLinks />
-            </nav>
-          </SideDrawer>
+          <>
+            <Backdrop
+              classes={styles["drawer-backdrop"]}
+              onClick={closeDrawerHandler}
+            />
+            <SideDrawer>
+              <nav className={styles["main-navigation-drawer-nav"]}>
+                <NavLinks inSideDrawer={true} />
+              </nav>
+            </SideDrawer>
+          </>
         )}
       </AnimatePresence>
       <HamburgerMenu
         onClick={drawerIsOpen ? closeDrawerHandler : openDrawerHandler}
+        isOpen={drawerIsOpen}
       />
       <MainHeader>
         <Logo />
-        <nav className={styles['main-navigation']} id="primary-navigation">
+        <nav className={styles["main-navigation"]} id="primary-navigation">
           <NavLinks />
         </nav>
       </MainHeader>

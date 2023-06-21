@@ -2,6 +2,7 @@
   display: flex;
   gap: 3em;
   list-style: none;
+  text-transform: uppercase;
 }
 
 .nav-list button {
@@ -12,14 +13,13 @@
 
 .nav-list svg {
   width: 25px;
-  fill: var(--primary-black);
 }
 
 .active-hover {
   margin-top: 2px;
   width: 100%;
   height: 1px;
-  background-color: var(--primary-black);
+  background-color: white;
 }
 
 @media (max-width: 50em) {
@@ -29,17 +29,20 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 0.2em;
-    font-size: 2rem;
-    color: var(--nav-font-color);
+    gap: 0.5em;
+    font-size: 1.5rem;
     padding: 1em;
-    background-color: var(--nav-background-color);
   }
 
   .nav-list li {
     width: 100%;
     text-align: right;
     padding-bottom: 0.4em;
+    border-bottom: 1px solid #252525;
+  }
+
+  .nav-list li:last-child {
+    border-bottom: none;
   }
 
   .nav-list svg {

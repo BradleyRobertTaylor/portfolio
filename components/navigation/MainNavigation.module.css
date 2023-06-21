@@ -2,28 +2,20 @@
   display: block;
 }
 
+.drawer-backdrop {
+  display: none;
+}
+
 @media (max-width: 50em) {
   .main-navigation {
     display: none;
   }
 
-  .main-navigation-drawer-nav {
-    height: 100%;
+  .drawer-backdrop {
+    display: block;
   }
 
-  /* .main-navigation {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 80%;
-    max-width: 350px;
-    height: 100vh;
-    z-index: -1;
-    transform: translateX(100%);
-  } */
-
-  .main-navigation svg {
-    width: 25px;
-    fill: #e2e0e0;
+  .main-navigation-drawer-nav {
+    height: 100%;
   }
 }

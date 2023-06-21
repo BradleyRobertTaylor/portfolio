@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1em;
+  padding: 0.5em 1em;
 }
 
 .contact-links-container {
@@ -16,6 +16,11 @@
   width: 30px;
 }
 
+.footer-section svg {
+  fill: white;
+  width: 30px;
+}
+
 /* ----------- Logo Styles ----------- */
 
 .logo div:last-child {
@@ -26,34 +31,13 @@
 .logo {
   text-transform: uppercase;
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 800;
   letter-spacing: 0.1em;
 }
 
-.logo div:last-child {
-  font-size: 0.6em;
-  letter-spacing: 0.4em;
-}
-
-.purple {
-  color: var(--primary-purple);
-}
-
-.logo .made {
-  font-weight: 400;
-}
-
-.upside-down {
-  display: inline-block;
-  transform: rotateX(180deg) translateY(0.05rem);
-}
-
-.letter-spacing {
-  letter-spacing: -0.06rem;
-}
-
-.not-bold {
-  font-weight: 400;
-  letter-spacing: 0.03em;
+@media (min-width: 50em) {
+  .footer-section {
+    padding: 2em 3em;
+  }
 }

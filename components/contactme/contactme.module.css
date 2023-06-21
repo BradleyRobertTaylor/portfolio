@@ -1,43 +1,123 @@
 .contact-me-section {
-  height: 100vh;
+  width: 100%;
+  padding: 0 1em;
+  padding-bottom: 4em;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 5%;
-  /* background-color: var(--secondary-white); */
+  /* background-image: url(../../public/thinker.jpg);
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat; */
 }
 
-.intro {
-  text-align: center;
-  font-size: 4rem;
-  color: var(--primary-purple);
+/* .contact-me-section label {
+  display: block;
   margin-bottom: 0.5em;
+} */
+
+.contact-me-section input,
+.contact-me-section textarea,
+.contact-me-section input {
+  width: 100%;
+  background-color: black;
+  /* border: 2px solid rgba(255, 255, 255, 0); */
+  border: 2px solid rgb(46, 49, 51);
+  color: inherit;
+  font: inherit;
+  padding: 1em;
+  margin-bottom: 1em;
+  outline: none;
+}
+
+.contact-me-section textarea {
+  resize: vertical;
+  outline: none;
+}
+
+.container {
+  width: 100%;
+  margin-top: 7em;
+  max-width: 570px;
+  margin-inline: auto;
+}
+
+.form-container {
+  width: 100%;
+}
+
+.section-head {
+  position: relative;
+  padding-top: 1em;
+  margin-bottom: 1em;
+}
+
+.section-head p {
+  font-size: 0.85rem;
+}
+
+.section-head span {
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  margin-left: 7em;
+  position: relative;
+}
+
+.section-head span::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -140%;
+  bottom: 50%;
+  width: 50px;
+  height: 1px;
+  background-color: white;
+}
+
+.section-head p {
+  margin-bottom: 4em;
 }
 
 .title {
-  font-size: 2rem;
-  text-align: center;
-  color: var(--primary-black);
-  margin-bottom: 0.7em;
+  font-size: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
 }
 
-.message {
-  /* color: #e2e0e0; */
-  color: var(--primary-black);
-  font-weight: 500;
+.floating-name-group {
+  position: relative;
+  margin-bottom: 1em;
 }
 
-.button {
-  font: inherit;
-  display: block;
-  width: fit-content;
-  margin-top: 4em;
-  margin-inline: auto;
-  border: none;
-  box-shadow: 0 0 4rem #00000059;
-  background-color: var(--primary-green);
-  color: #161618;
+.floating-name-group label {
   font-weight: 600;
-  border-radius: 3em;
-  padding: 1.4em 2em;
+  position: absolute;
+  background-color: black;
+  height: fit-content;
+  padding: 5px 18px 5px 18px;
+  color: rgb(46, 49, 51);
+  top: 12px;
+  bottom: 0;
+  left: 2px;
+  pointer-events: none;
+  transition: all 0.2s ease-in;
+}
+
+.floating-name-group textarea:focus + label,
+.floating-name-group textarea:valid + label,
+.floating-name-group input:focus + label,
+.floating-name-group input:valid + label {
+  transform: translateY(-30px);
+  color: white;
+}
+
+.floating-name-group textarea,
+.floating-name-group input {
+  transition: all 0.2s ease-in;
+}
+
+.floating-name-group textarea:focus,
+.floating-name-group input:focus {
+  border-color: white;
 }

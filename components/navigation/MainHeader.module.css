@@ -2,9 +2,17 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--background-color);
+  /* background-color: var(--background-color); */
+  background-color: transparent;
   padding: 0.5em 1em;
+  /* padding: 2em 0.5em 0.5em; */
   position: fixed;
   width: 100%;
-  z-index: 1;
+  z-index: 2;
+}
+
+@media (min-width: 50em) {
+  .header {
+    padding: 2em 3em;
+  }
 }

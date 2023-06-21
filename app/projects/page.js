@@ -1,5 +1,11 @@
-import Projects from '@/components/projects/projects';
+import Footer from "@/components/footer/footer";
+import Projects from "@/components/projects/projects";
 
 export default function ProjectsPage() {
-  return <Projects />;
+  return (
+    <main>
+      <Projects />
+      <Footer />
+    </main>
+  );
 }

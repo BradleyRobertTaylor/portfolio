@@ -2,15 +2,15 @@
   position: fixed;
   right: 0;
   top: 0;
-  width: 70%;
-  max-width: 350px;
-  z-index: 100;
+  width: 100%;
+  z-index: 300;
   height: 100vh;
   background: black;
+  overflow-y: auto;
 }
 
-@media (min-width: 50em) {
+@media (min-width: 700px) {
   .side-drawer {
-    display: none;
+    max-width: 550px;
   }
 }

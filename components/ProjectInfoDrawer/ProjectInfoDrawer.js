@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-import styles from "./SideDrawer.module.css";
+import styles from "./ProjectInfoDrawer.module.css";
 
 const drawerVariants = {
   drawerIsOpen: {
@@ -16,11 +16,11 @@ const drawerVariants = {
   },
 };
 
-export default function SideDrawer(props) {
+export default function ProjectInfoDrawer(props) {
   return (
     <motion.aside
+      id="project-drawer"
       className={styles["side-drawer"]}
-      onClick={props.onClick}
       initial="drawerIsClosed"
       animate="drawerIsOpen"
       variants={drawerVariants}
