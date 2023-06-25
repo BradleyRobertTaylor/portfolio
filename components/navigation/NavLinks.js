@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import { onClick } from "react";
 import { motion } from "framer-motion";
 
 import styles from "./NavLinks.module.css";
@@ -34,27 +33,13 @@ export default function NavLinks(props) {
   return (
     <ul className={styles["nav-list"]}>
       {links.map(({ link, title }, index) => {
-        if (props.inSideDrawer) {
-          return (
-            <motion.li key={index} variants={drawerLink}>
-              <Link onClick={props.onClick} href={link}>
-                {title}
-              </Link>
-            </motion.li>
-          );
-        } else {
-          return (
-            <motion.li key={index} whileHover="hover" initial="inactive">
-              <Link href={link}>
-                {title}
-                <motion.div
-                  className={styles["active-hover"]}
-                  variants={linkActive}
-                />
-              </Link>
-            </motion.li>
-          );
-        }
+        return (
+          <motion.li key={index} variants={drawerLink}>
+            <Link onClick={props.onClick} href={link}>
+              {title}
+            </Link>
+          </motion.li>
+        );
       })}
     </ul>
   );

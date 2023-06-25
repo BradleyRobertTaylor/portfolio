@@ -4,12 +4,10 @@ import styles from "./HamburgerMenu.module.css";
 
 const hamburgerVariants = {
   drawerIsOpen: {
-    fill: "white",
     rotate: -90,
     transition: { delayChildren: 0.2 },
   },
   drawerIsClosed: {
-    fill: "var(--primary-black)",
     rotate: 0,
     transition: { delayChildren: 0.2 },
   },

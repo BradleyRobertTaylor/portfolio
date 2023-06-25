@@ -5,18 +5,13 @@
 @media (max-width: 50em) {
   .hamburger-button {
     display: block;
-    position: fixed;
-    top: 0.5rem;
-    right: 0.7rem;
-    z-index: 200;
     background: transparent;
     border: none;
-    border-radius: 50%;
-    aspect-ratio: 1;
     fill: white;
   }
 
   .hamburger-button svg {
+    display: block;
     width: 25px;
   }
 }

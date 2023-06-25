@@ -1,14 +1,22 @@
 .main-navigation {
-  display: block;
+  display: flex;
+  gap: 40px;
 }
 
 .drawer-backdrop {
   display: none;
 }
 
-@media (max-width: 50em) {
+.hidden {
+  display: none;
+}
+@media (max-width: 800px) {
   .main-navigation {
     display: none;
+  }
+
+  .hidden {
+    display: block;
   }
 
   .drawer-backdrop {

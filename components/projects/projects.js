@@ -24,7 +24,7 @@ const projects = [
     alt: "Placefiller project",
     title: "Placefiller",
     shortDescription:
-      "This is here to fill the place for projects until I update them.",
+      "This is the short description for these placefillers before I enter my own projects in. I'm sure once this project is actually uploaded it will be amazing!",
     longDescription:
       "Piggment is a curated collection of amazingly colored gradients for designers, developers, and smart creators over the world. now you can generate, explore, save, easy CSS cross-browser gradient codes all in one place.",
     technologies: ["JavaScript", "React", "Next.js", "MongoDB"],
@@ -115,21 +115,10 @@ export default function Projects() {
         )}
       </AnimatePresence>
       <section id="projects" className={styles["projects-section"]}>
-        <div className={styles.container}>
-          <div className={styles["section-head"]}>
-            <span>Take a look at my</span>
-            <h2 className={`${styles.title}`}>Projects</h2>
-          </div>
-          <div className={styles["project-grid"]}>
-            <ProjectColumns
-              projects={projects}
-              clickHandler={openProjectInfoDrawer}
-            />
-          </div>
-          <Link href="/about">
-            <Button text="About Me" />
-          </Link>
-        </div>
+        <ProjectColumns
+          projects={projects}
+          clickHandler={openProjectInfoDrawer}
+        />
       </section>
     </>
   );

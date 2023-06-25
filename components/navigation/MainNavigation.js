@@ -8,9 +8,10 @@ import MainHeader from "./MainHeader";
 
 import styles from "./MainNavigation.module.css";
 import NavLinks from "./NavLinks";
-import Logo from "../Logo/Logo";
 import SideDrawer from "./SideDrawer";
 import Backdrop from "../Backdrop/Backdrop";
+import Logo from "../Logo/Logo";
+import SocialLinks from "../SocialLinks/SocialLinks";
 
 export default function Navbar() {
   const [drawerIsOpen, setDrawerIsOpen] = useState(false);
@@ -60,15 +61,19 @@ export default function Navbar() {
           </>
         )}
       </AnimatePresence>
-      <HamburgerMenu
-        onClick={drawerIsOpen ? closeDrawerHandler : openDrawerHandler}
-        isOpen={drawerIsOpen}
-      />
       <MainHeader>
-        <Logo />
+        <div className={styles.hidden}>
+          <Logo />
+        </div>
+        <HamburgerMenu
+          onClick={drawerIsOpen ? closeDrawerHandler : openDrawerHandler}
+          isOpen={drawerIsOpen}
+        />
         <nav className={styles["main-navigation"]} id="primary-navigation">
+          <Logo />
           <NavLinks />
         </nav>
+        <SocialLinks />
       </MainHeader>
     </>
   );

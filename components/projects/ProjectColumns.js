@@ -3,11 +3,20 @@ import styles from "./ProjectColumns.module.css";
 
 export default function ProjectColumns({ projects, clickHandler }) {
   const column1 = [];
-  const column2 = [];
 
   projects.forEach(
     (
-      { id, screenshot, alt, title, shortDescription, technologies, height },
+      {
+        id,
+        screenshot,
+        alt,
+        title,
+        shortDescription,
+        technologies,
+        height,
+        url,
+        githubUrl,
+      },
       index
     ) => {
       const currentProject = (
@@ -21,19 +30,14 @@ export default function ProjectColumns({ projects, clickHandler }) {
           shortDescription={shortDescription}
           technologies={technologies}
           height={height}
+          url={url}
+          githubUrl={githubUrl}
         />
       );
 
-      index % 2 === 0
-        ? column1.push(currentProject)
-        : column2.push(currentProject);
+      column1.push(currentProject);
     }
   );
 
-  return (
-    <>
-      <div className={styles["column"]}>{[column1]}</div>
-      <div className={styles["column"]}>{[column2]}</div>
-    </>
-  );
+  return column1;
 }

@@ -1,5 +1,7 @@
+// import localFont from "next/font/local";
+import Footer from "@/components/footer/footer";
+import { inter } from "./fonts";
 import "./globals.css";
-import { inter, poppins, roboto, space_mono } from "./fonts";
 
 import MainNavigation from "@/components/navigation/MainNavigation";
 
@@ -14,6 +16,7 @@ export default function RootLayout({ children }) {
       <body>
         <MainNavigation />
         {children}
+        <Footer />
       </body>
     </html>
   );

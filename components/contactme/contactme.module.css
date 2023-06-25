@@ -27,7 +27,7 @@
   color: inherit;
   font: inherit;
   padding: 1em;
-  margin-bottom: 1em;
+  margin-bottom: 2em;
   outline: none;
 }
 
@@ -93,7 +93,6 @@
 .floating-name-group label {
   font-weight: 600;
   position: absolute;
-  background-color: black;
   height: fit-content;
   padding: 5px 18px 5px 18px;
   color: rgb(46, 49, 51);
@@ -108,7 +107,7 @@
 .floating-name-group textarea:valid + label,
 .floating-name-group input:focus + label,
 .floating-name-group input:valid + label {
-  transform: translateY(-30px);
+  transform: translate(-22px, -40px);
   color: white;
 }
 

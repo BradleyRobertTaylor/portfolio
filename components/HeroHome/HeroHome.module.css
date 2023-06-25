@@ -1,40 +1,77 @@
 .hero {
-  width: 100vw;
-  height: 100vh;
-  display: grid;
-  padding: 3em 1em 1em 1em;
-  /* background-image: url(../../public/ales-nesetril-Im7lZjxeLhg-unsplash.jpg); */
-  /* background-size: cover; */
-  /* background-position: center; */
-  align-items: flex-end;
-  justify-content: flex-end;
+  position: relative;
+  /* padding-top: 4em; */
+  padding: 2.5em;
+  height: 86vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 48px;
 }
 
 .title {
-  text-transform: uppercase;
-  font-weight: 400;
-  letter-spacing: 2.2px;
-  font-size: 1.2rem;
-  margin: 0;
-  text-align: right;
-}
-
-.title:first-of-type {
-  font-weight: 700;
+  font-weight: 800;
   font-size: 3rem;
+  letter-spacing: -1.1px;
+  line-height: 1.1em;
 }
 
-.title:last-of-type {
-  margin-bottom: 1em;
+.paragraph {
+  font-weight: 500;
+  font-size: 1.25rem;
+  line-height: 1.5em;
+  color: rgba(255, 255, 255, 0.64);
 }
 
-.button-container {
-  display: flex;
-  justify-content: flex-end;
+.arrow-button {
+  display: grid;
+  place-items: center;
+  position: absolute;
+  bottom: 24px;
+  right: 36px;
+  border-radius: 50%;
+  width: 64px;
+  height: 64px;
+  background-color: rgb(39, 39, 43);
 }
 
-@media (min-width: 50em) {
+.arrow-button svg {
+  display: block;
+  width: 27px;
+}
+
+@media (min-width: 800px) {
   .hero {
-    padding: 3em 3em 10em;
+    height: 100vh;
+    padding: 96px;
+  }
+
+  .hero__wrapper {
+    max-width: 60%;
+  }
+
+  .title {
+    font-size: 4rem;
+  }
+
+  .paragraph {
+    font-size: 1.5rem;
+  }
+
+  .arrow-button {
+    bottom: 100px;
+    right: 100px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .title {
+    font-size: 5rem;
   }
 }

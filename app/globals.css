@@ -3,37 +3,15 @@
 * {
   box-sizing: border-box;
   scroll-behavior: smooth !important;
+  margin: 0;
 }
 
 :root {
-  /* --primary-purple: #502cde;
-  --primary-white: #f5f5f5;
-  --primary-white: #e2e0e0;
-  --secondary-white: #d4d4d4;
-  --primary-black: #161618;
-  --primary-green: #a3d9a3;
-  --primary-logo: #502cde;
-  --background-color: #f1f5f9;
-  --nav-background-color: #502cde;
-  --nav-font-color: #e2e0e0;
-  --drawer-nav-border-color: #868383; */
+  --primary-black: #0a0a0a;
 }
-/* 
 
-[data-theme='dark'] {
-  --primary-white: #161618;
-  --secondary-white: #161618;
-  --primary-black: #f5f5f5;
-  --primary-green: #9dde16;
-  --primary-purple: #4b23eb;
-  --primary-green: #0ceb8e;
-  --primary-black: #e2e0e0;
-  --primary-logo: white;
-  --background-color: #1f1f1f;
-  --nav-background-color: #161618;
-  --nav-text-color: #e2e0e0;
-  --drawer-nav-border-color: #252525;
-} */
+/* [data-theme='dark'] { */
+/* } */
 
 html,
 body {
@@ -48,16 +26,14 @@ body {
 }
 
 body {
-  background-color: #18181b;
+  background-color: var(--primary-black);
   color: white;
 }
 
-.body-container {
-  /* background-image: url(../public/voicu-apostol-93F3aiv_ioM-unsplash.jpg); */
-  /* background-size: auto; */
-  /* background-repeat: no-repeat; */
-  /* background-attachment: scroll; */
-  /* background-position: center; */
+img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 h1,

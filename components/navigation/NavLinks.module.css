@@ -2,7 +2,9 @@
   display: flex;
   gap: 3em;
   list-style: none;
-  text-transform: uppercase;
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.64);
+  align-items: center;
 }
 
 .nav-list button {

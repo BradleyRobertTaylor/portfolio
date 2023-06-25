@@ -4,7 +4,6 @@ import { Formik, Field, Form } from "formik";
 import * as Yup from "yup";
 import Button from "../Button/Button";
 import styles from "./contactme.module.css";
-import { poppins } from "@/app/fonts";
 
 export default function ContactMe() {
   function getErrorColor(formik, prop) {
@@ -23,7 +22,7 @@ export default function ContactMe() {
         <div className={styles["section-head"]}>
           <span>Say Hello</span>
           <h2 className={`${styles.title}`}>Contact</h2>
-          <p className={poppins.className}>
+          <p>
             Get in touch with me here or shoot me an email at{" "}
             <strong>taylorbradleyr@gmail.com</strong>
           </p>
@@ -73,7 +72,7 @@ export default function ContactMe() {
           {(formik) => (
             <form
               onSubmit={formik.handleSubmit}
-              className={`${styles["form-container"]} ${poppins.className}`}
+              className={styles["form-container"]}
             >
               <div className={styles["floating-name-group"]}>
                 <Field
@@ -82,6 +81,7 @@ export default function ContactMe() {
                     borderColor: getErrorColor(formik, "name"),
                   }}
                   name="name"
+                  id="name"
                   type="text"
                 />
                 <label htmlFor="name">Name</label>
@@ -94,6 +94,7 @@ export default function ContactMe() {
                   }}
                   type="text"
                   name="email"
+                  id="email"
                 />
                 <label htmlFor="email">Email</label>
               </div>
@@ -106,6 +107,7 @@ export default function ContactMe() {
                   }}
                   rows="8"
                   type="text"
+                  id="message"
                   name="message"
                 />
                 <label htmlFor="message">How can I help?</label>
