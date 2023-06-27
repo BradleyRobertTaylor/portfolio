@@ -1,9 +1,14 @@
-// import localFont from "next/font/local";
 import Footer from "@/components/footer/footer";
-import { inter } from "./fonts";
+import { Inter } from "next/font/google";
 import "./globals.css";
 
 import MainNavigation from "@/components/navigation/MainNavigation";
+
+export const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
+});
 
 export const metadata = {
   title: "Portfolio",
@@ -13,7 +18,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={inter.className}>
-      <body>
+      <body data-theme="">
         <MainNavigation />
         {children}
         <Footer />

@@ -2,7 +2,7 @@
   position: relative;
   /* padding-top: 4em; */
   padding: 2.5em;
-  height: 86vh;
+  height: 90vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -26,7 +26,7 @@
   font-weight: 500;
   font-size: 1.25rem;
   line-height: 1.5em;
-  color: rgba(255, 255, 255, 0.64);
+  color: var(--secondary-text-grey);
 }
 
 .arrow-button {
@@ -38,7 +38,12 @@
   border-radius: 50%;
   width: 64px;
   height: 64px;
-  background-color: rgb(39, 39, 43);
+  background-color: var(--button-background-grey);
+  transition: background-color 0.4s;
+}
+
+.arrow-button:hover {
+  background-color: var(--button-hover);
 }
 
 .arrow-button svg {
@@ -46,7 +51,19 @@
   width: 27px;
 }
 
+.long-dash {
+  display: none;
+}
+
 @media (min-width: 800px) {
+  .long-dash {
+    display: inline;
+  }
+
+  .short-dash {
+    display: none;
+  }
+
   .hero {
     height: 100vh;
     padding: 96px;

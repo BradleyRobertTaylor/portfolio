@@ -6,7 +6,7 @@ export default function Logo() {
   return (
     <Link href="/">
       <div className={`${styles.logo}`}>
-        <span>Taylor Made</span>
+        <span>Bradley Taylor</span>
       </div>
     </Link>
   );

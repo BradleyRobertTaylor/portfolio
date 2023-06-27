@@ -1,37 +1,6 @@
 "use client";
 
-import Link from "next/link";
-import { motion } from "framer-motion";
-import Button from "../Button/Button";
-
 import styles from "./HeroHome.module.css";
-
-const main = {
-  hidden: {
-    opacity: 0,
-  },
-  visible: {
-    opacity: 1,
-    transition: { duration: 0.7, delayChildren: 0.7 },
-  },
-};
-
-const container = {
-  hidden: { opacity: 0 },
-  visible: { opacity: 1, transition: { staggerChildren: 0.3 } },
-};
-
-const item = {
-  hidden: {
-    opacity: 0,
-    y: 20,
-  },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 1 },
-  },
-};
 
 export default function HeroHome() {
   return (
@@ -39,7 +8,9 @@ export default function HeroHome() {
       <div className={styles["hero-text"]}>
         <div className={styles["hero__wrapper"]}>
           <h1 className={styles.title}>
-            Hello &#8212; I'm Brad. A Las Vegas-based Software Engineer.
+            Hello <span className={styles["short-dash"]}>-</span>
+            <span className={styles["long-dash"]}>&#8212;</span> I'm Brad.
+            <br />A Las Vegas - based Software Engineer.
           </h1>
           <p className={styles.paragraph}>
             I develop web applications that are robust and scalable while

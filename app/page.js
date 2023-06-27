@@ -4,12 +4,9 @@ import Projects from "@/components/projects/projects";
 
 export default function Home() {
   return (
-    <>
-      <main>
-        <HeroHome />
-        <Projects />
-      </main>
-      <Footer />
-    </>
+    <main>
+      <HeroHome />
+      <Projects />
+    </main>
   );
 }

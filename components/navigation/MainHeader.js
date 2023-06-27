@@ -1,7 +1,7 @@
-import { useState } from 'react';
-import { motion, useScroll, useMotionValueEvent } from 'framer-motion';
+import { useState } from "react";
+import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 
-import styles from './MainHeader.module.css';
+import styles from "./MainHeader.module.css";
 
 export default function MainHeader(props) {
   const [navIsHidden, setNavIsHidden] = useState(false);
@@ -16,17 +16,17 @@ export default function MainHeader(props) {
     }
   };
 
-  useMotionValueEvent(scrollY, 'change', update);
+  useMotionValueEvent(scrollY, "change", update);
 
   const navVariants = {
     visible: { opacity: 1, y: 0 },
-    hidden: { opacity: 0, y: -25 },
+    hidden: { pointerEvents: "none", opacity: 0, y: -25 },
   };
 
   return (
     <motion.header
       variants={navVariants}
-      animate={navIsHidden ? 'hidden' : 'visible'}
+      animate={navIsHidden ? "hidden" : "visible"}
       transition={{ ease: [0.1, 0.25, 0.3, 1], duration: 0.6 }}
       className={styles.header}
     >

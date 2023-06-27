@@ -3,25 +3,21 @@
   gap: 3em;
   list-style: none;
   font-size: 0.875rem;
-  color: rgba(255, 255, 255, 0.64);
   align-items: center;
+  font-weight: 600;
+  color: var(--secondary-text-grey);
 }
 
-.nav-list button {
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
+.nav-list li {
+  transition: color 0.4s;
+}
+
+.nav-list li:hover {
+  color: var(--link-hover);
 }
 
 .nav-list svg {
   width: 25px;
-}
-
-.active-hover {
-  margin-top: 2px;
-  width: 100%;
-  height: 1px;
-  background-color: white;
 }
 
 @media (max-width: 50em) {
@@ -45,13 +41,5 @@
 
   .nav-list li:last-child {
     border-bottom: none;
-  }
-
-  .nav-list svg {
-    fill: #e2e0e0;
-  }
-
-  .active-hover {
-    display: none;
   }
 }

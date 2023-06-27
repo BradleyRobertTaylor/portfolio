@@ -8,7 +8,7 @@
 .heading {
   font-size: 3rem;
   font-weight: 700;
-  color: white;
+  color: var(--primary-text);
 }
 
 .footer-links {
@@ -16,17 +16,22 @@
   display: flex;
   flex-direction: column;
   gap: 24px;
-  color: rgba(255, 255, 255, 0.64);
+  color: var(--secondary-text-grey);
+}
+
+.footer-links li:hover {
+  color: var(--link-hover);
 }
 
 .footer-links li {
   padding: 8px;
+  transition: color 0.4s;
 }
 
 .email {
   font-size: 1.25rem;
   font-weight: 500;
-  color: white;
+  color: var(--primary-text);
 }
 
 @media (min-width: 800px) {
@@ -44,6 +49,7 @@
 
   .footer-links {
     flex-direction: row;
+    align-items: center;
     gap: 48px;
   }
 }
