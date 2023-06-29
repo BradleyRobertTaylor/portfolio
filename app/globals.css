@@ -6,6 +6,10 @@
   margin: 0;
 }
 
+* {
+  outline: none;
+}
+
 :root {
   --primary-background: #0a0a0a;
   --primary-text: #fff;
@@ -13,6 +17,8 @@
   --button-background-grey: rgb(39, 39, 43);
   --button-hover: rgb(55, 55, 63);
   --link-hover: #fff;
+  --form-input-grey: #262626;
+  --form-placeholder-grey: #262626;
 }
 
 [data-theme="light"] {
@@ -22,6 +28,8 @@
   --button-background-grey: rgb(245, 245, 250);
   --button-hover: rgb(217, 217, 231);
   --link-hover: #000;
+  --form-input-grey: rgba(0, 0, 0, 0.64);
+  --form-placeholder-grey: #d1d5db;
 }
 
 html,

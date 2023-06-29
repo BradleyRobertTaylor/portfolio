@@ -19,7 +19,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={inter.className}>
       <body data-theme="">
-        <MainNavigation />
         {children}
         <Footer />
       </body>

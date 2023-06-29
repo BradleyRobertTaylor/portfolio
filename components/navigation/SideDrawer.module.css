@@ -2,14 +2,20 @@
   position: fixed;
   right: 0;
   top: 0;
-  width: 70%;
-  max-width: 350px;
+  width: 100%;
   z-index: 100;
   height: 100vh;
-  background: black;
+  background: var(--button-background-grey);
 }
 
-@media (min-width: 50em) {
+@media (min-width: 600px) {
+  .side-drawer {
+    max-width: 350px;
+    width: 70%;
+  }
+}
+
+@media (min-width: 880px) {
   .side-drawer {
     display: none;
   }

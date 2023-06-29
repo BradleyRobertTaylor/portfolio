@@ -20,7 +20,7 @@
   width: 25px;
 }
 
-@media (max-width: 50em) {
+@media (max-width: 879px) {
   .nav-list {
     display: flex;
     height: 100%;
@@ -36,7 +36,6 @@
     width: 100%;
     text-align: right;
     padding-bottom: 0.4em;
-    border-bottom: 1px solid #252525;
   }
 
   .nav-list li:last-child {

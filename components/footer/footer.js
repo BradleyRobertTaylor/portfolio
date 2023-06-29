@@ -10,16 +10,27 @@ export default function Footer() {
       </h2>
       <ul className={styles["footer-links"]}>
         <li className={styles.email}>
-          <Link href="#">taylorbradleyr@gmail.com</Link>
+          <Link target="_blank" href="mailto:taylorbradleyr@gmail.com">
+            taylorbradleyr@gmail.com
+          </Link>
         </li>
         <li>
-          <Link href="#">Resume</Link>
+          <Link target="_blank" href="#">
+            Resume
+          </Link>
         </li>
         <li>
-          <Link href="#">Linkedin</Link>
+          <Link
+            target="_blank"
+            href="https://www.linkedin.com/in/BradleyRobertTaylor/"
+          >
+            Linkedin
+          </Link>
         </li>
         <li>
-          <Link href="#">Github</Link>
+          <Link target="_blank" href="https://github.com/BradleyRobertTaylor">
+            Github
+          </Link>
         </li>
       </ul>
     </footer>

@@ -2,12 +2,13 @@
   display: none;
 }
 
-@media (max-width: 50em) {
+@media (max-width: 879px) {
   .hamburger-button {
     display: block;
     background: transparent;
     border: none;
-    fill: white;
+    fill: var(--primary-text);
+    cursor: pointer;
   }
 
   .hamburger-button svg {

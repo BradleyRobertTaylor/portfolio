@@ -1,7 +1,7 @@
 .carousel-title {
   font-size: 2.25rem;
   font-weight: 700;
-  padding: 36px;
+  padding: 36px 0;
 }
 
 .technology-carousel {
@@ -27,4 +27,15 @@
 .carousel {
   display: flex;
   gap: 100px;
+}
+
+@media (min-width: 800px) {
+  .technology-carousel {
+    padding: 48px 96px;
+  }
+  .carousel-title {
+    width: 60%;
+    padding: 48px 0;
+    margin-left: auto;
+  }
 }

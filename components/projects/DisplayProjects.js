@@ -8,7 +8,7 @@ export default function DisplayProjects({ projects, clickHandler }) {
         screenshot,
         alt,
         title,
-        shortDescription,
+        description,
         technologies,
         height,
         url,
@@ -23,7 +23,7 @@ export default function DisplayProjects({ projects, clickHandler }) {
         screenshot={screenshot}
         alt={alt}
         title={title}
-        shortDescription={shortDescription}
+        description={description}
         technologies={technologies}
         height={height}
         url={url}

@@ -20,11 +20,12 @@ export default function ContactMe() {
     <section id="contact" className={styles["contact-me-section"]}>
       <div className={styles.container}>
         <div className={styles["section-head"]}>
-          <span>Say Hello</span>
           <h2 className={`${styles.title}`}>Contact</h2>
           <p>
             Get in touch with me here or shoot me an email at{" "}
-            <strong>taylorbradleyr@gmail.com</strong>
+            <a target="_blank" href="mailto:taylorbradleyr@gmail.com">
+              taylorbradleyr@gmail.com
+            </a>
           </p>
         </div>
         <Formik

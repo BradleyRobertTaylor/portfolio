@@ -9,7 +9,7 @@
   z-index: 102;
 }
 
-@media (min-width: 800px) {
+@media (min-width: 880px) {
   .header {
     padding-inline: 96px;
     height: 120px;

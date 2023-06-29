@@ -35,9 +35,12 @@
     gap: 36px;
   }
 
+  .image-wrapper {
+    flex: 1;
+  }
+
   .photo-section img {
     height: 400px;
-    flex: 1;
   }
 
   .titles-section {

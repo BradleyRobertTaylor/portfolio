@@ -7,13 +7,6 @@
   flex-direction: column;
 }
 
-/* .hero__wrapper { */
-/*   display: flex; */
-/*   flex-direction: column; */
-/*   justify-content: space-around; */
-/*   gap: 48px; */
-/* } */
-
 .title {
   font-weight: 700;
   font-size: 2.25rem;

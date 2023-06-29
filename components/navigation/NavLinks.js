@@ -7,17 +7,10 @@ import styles from "./NavLinks.module.css";
 
 const links = [
   { link: "/", title: "Home" },
-  { link: "/projects", title: "Projects" },
+  { link: "#projects", title: "Projects" },
   { link: "/about", title: "About" },
   { link: "/contact", title: "Contact" },
 ];
-
-const linkActive = {
-  hover: { width: "100%" },
-  inactive: {
-    width: "0px",
-  },
-};
 
 const drawerLink = {
   drawerIsOpen: {

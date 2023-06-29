@@ -38,7 +38,7 @@
 .information-wrapper {
   display: flex;
   flex-direction: column;
-  gap: 36px;
+  gap: 30px;
 }
 
 .project-information {
@@ -62,13 +62,21 @@
   font-size: 1.75rem;
   font-weight: 600;
   letter-spacing: -0.4px;
+  margin-bottom: 5px;
 }
 
-.short-description {
+.description {
   font-size: 0.875rem;
   font-weight: 500;
   line-height: 1.5em;
   color: var(--secondary-text-grey);
+}
+
+.links-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  word-wrap: break-word;
 }
 
 .projet-information__heading {
@@ -76,10 +84,16 @@
   font-weight: 600;
 }
 
-.project-information__content {
+.project-information__content,
+.project-information__link {
   font-size: 0.875rem;
   line-height: 1.5em;
   color: var(--secondary-text-grey);
+  transition: color 0.4s;
+}
+
+.project-information__link:hover {
+  color: var(--link-hover);
 }
 
 .arrow-button {

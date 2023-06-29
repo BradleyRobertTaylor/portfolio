@@ -29,6 +29,14 @@
   color: var(--secondary-text-grey);
 }
 
+.project-information__heading {
+  color: var(--primary-text);
+}
+
+.project-information__content {
+  color: var(--secondary-text-grey);
+}
+
 .arrow-button {
   display: grid;
   place-items: center;
@@ -55,7 +63,13 @@
   display: none;
 }
 
-@media (min-width: 800px) {
+@media (min-width: 750px) {
+  .hero__wrapper {
+    max-width: 70%;
+  }
+}
+
+@media (min-width: 880px) {
   .long-dash {
     display: inline;
   }
@@ -67,10 +81,6 @@
   .hero {
     height: 100vh;
     padding: 96px;
-  }
-
-  .hero__wrapper {
-    max-width: 60%;
   }
 
   .title {

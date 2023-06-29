@@ -1,10 +1,23 @@
+"use client";
+
+import { motion } from "framer-motion";
 import TechnologyCarousel from "../TechnologyCarousel/TechnologyCarousel";
+
 import styles from "./AboutMain.module.css";
 
 export default function AboutMain() {
   return (
     <>
-      <section className={styles["text-block"]}>
+      <motion.section
+        initial={{ opacity: 0, x: -25 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{
+          ease: [0.1, 0.25, 0.3, 1],
+          duration: 1,
+        }}
+        viewport={{ once: true, amount: 0.2 }}
+        className={styles["text-block"]}
+      >
         <p>
           I'm a Product Designer with 10 years of experience designing digital
           products that are intuitive, visually appealing, and effective. My
@@ -28,7 +41,7 @@ export default function AboutMain() {
           theory, and layout, which I apply to my designs to create a consistent
           and visually appealing user experience.
         </p>
-      </section>
+      </motion.section>
       <TechnologyCarousel />
     </>
   );

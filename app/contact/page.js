@@ -1,6 +1,13 @@
 import ContactMe from "@/components/contactme/contactme";
-import Footer from "@/components/footer/footer";
+import MainNavigation from "@/components/navigation/MainNavigation";
 
 export default function Contact() {
-  return <ContactMe />;
+  return (
+    <>
+      <MainNavigation />
+      <main>
+        <ContactMe />
+      </main>
+    </>
+  );
 }
