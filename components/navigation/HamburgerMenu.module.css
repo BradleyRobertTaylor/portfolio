@@ -2,8 +2,10 @@
   display: none;
 }
 
-@media (max-width: 879px) {
+@media (max-width: 1023px) {
   .hamburger-button {
+    position: relative;
+    z-index: 105;
     display: block;
     background: transparent;
     border: none;
@@ -12,7 +14,13 @@
   }
 
   .hamburger-button svg {
+    stroke: var(--primary-text);
     display: block;
-    width: 25px;
+    width: 30px;
+  }
+
+  .hamburger-button:focus-visible {
+    outline: 1px solid blue;
+    border-radius: 10px;
   }
 }

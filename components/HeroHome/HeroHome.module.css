@@ -54,6 +54,11 @@
   background-color: var(--button-hover);
 }
 
+.arrow-button:focus-visible {
+  background-color: var(--button-hover);
+  outline: 1px solid blue;
+}
+
 .arrow-button svg {
   display: block;
   width: 27px;

@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useRef } from "react";
-import { useInView, motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 import styles from "./ProjectItem.module.css";
 
@@ -25,6 +25,29 @@ export default function ProjectCard({
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({ target: ref });
   const y = useParallax(scrollYProgress, 30);
+
+  if (id === 0) {
+    return (
+      <div
+        data-id={id}
+        onClick={clickHandler}
+        className={`${styles["project-wrapper"]}`}
+      >
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 2 }}
+          viewport={{ once: true, amount: 1 }}
+          ref={ref}
+          style={{ y }}
+          className={styles["big-number"]}
+        >{`0${id}`}</motion.div>
+        <Link as="/about" className={styles["image-link"]} href="/about">
+          <div className={styles["coming-soon"]}>Projects Coming Soon</div>
+        </Link>
+      </div>
+    );
+  }
 
   return (
     <div
@@ -85,21 +108,21 @@ export default function ProjectCard({
           <div className={styles["project-information__heading"]}>
             Live Site
           </div>
-          <a
+          <Link
             className={styles["project-information__link"]}
             target="_blank"
             href={url}
           >
             {url}
-          </a>
+          </Link>
           <div className={styles["project-information__heading"]}>GitHub</div>
-          <a
+          <Link
             className={styles["project-information__link"]}
             target="_blank"
             href={githubUrl}
           >
             {githubUrl}
-          </a>
+          </Link>
         </motion.div>
         <div className={styles["project-information"]}>
           <motion.div
@@ -117,7 +140,7 @@ export default function ProjectCard({
               Technologies
             </div>
             <div className={styles["project-information__content"]}>
-              {technologies.join(", ")}
+              {technologies?.join(", ")}
             </div>
           </motion.div>
           <motion.div
@@ -131,7 +154,7 @@ export default function ProjectCard({
             viewport={{ once: true, amount: 1 }}
             className={styles["project-information__button"]}
           >
-            <a
+            <Link
               target="_blank"
               href={`${url}`}
               className={styles["arrow-button"]}
@@ -145,7 +168,7 @@ export default function ProjectCard({
                   d="M12 19l6-6m-6 6l-6-6m6 6V5"
                 ></path>
               </svg>
-            </a>
+            </Link>
           </motion.div>
         </div>
       </div>

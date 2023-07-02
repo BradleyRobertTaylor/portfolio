@@ -23,6 +23,16 @@
   color: var(--link-hover);
 }
 
+.footer-links a {
+  padding: 0.2em;
+}
+
+.footer-links a:focus-visible {
+  color: var(--link-hover);
+  outline: 1px solid blue;
+  border-radius: 10px;
+}
+
 .footer-links li {
   padding: 8px;
   transition: color 0.4s;

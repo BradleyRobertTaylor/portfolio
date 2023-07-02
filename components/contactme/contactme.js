@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+import { motion } from "framer-motion";
 import { Formik, Field, Form } from "formik";
 import * as Yup from "yup";
 import Button from "../Button/Button";
@@ -9,25 +11,36 @@ export default function ContactMe() {
   function getErrorColor(formik, prop) {
     if (formik.touched[prop] && !formik.errors[prop]) {
       return "green";
-    } else if (formik.touched[prop] && formik.errors[prop]) {
-      return "red";
-    } else {
-      return "";
     }
+
+    if (formik.touched[prop] && formik.errors[prop]) {
+      return "red";
+    }
+
+    return "";
   }
 
   return (
     <section id="contact" className={styles["contact-me-section"]}>
       <div className={styles.container}>
-        <div className={styles["section-head"]}>
+        <motion.div
+          initial={{ opacity: 0, y: 25 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{
+            ease: [0.1, 0.25, 0.3, 1],
+            duration: 1,
+            delay: 0.5,
+          }}
+          className={styles["section-head"]}
+        >
           <h2 className={`${styles.title}`}>Contact</h2>
           <p>
             Get in touch with me here or shoot me an email at{" "}
-            <a target="_blank" href="mailto:taylorbradleyr@gmail.com">
+            <Link target="_blank" href="mailto:taylorbradleyr@gmail.com">
               taylorbradleyr@gmail.com
-            </a>
+            </Link>
           </p>
-        </div>
+        </motion.div>
         <Formik
           initialValues={{
             name: "",
@@ -43,37 +56,19 @@ export default function ContactMe() {
               .required("Required"),
             message: Yup.string().required("Required"),
           })}
-          onSubmit={async ({ name, email, message }, { resetForm }) => {
-            console.log("Sending");
-
-            const data = {
-              name,
-              email,
-              message,
-            };
-
-            console.log(data);
-
-            const req = await fetch("/api/email", {
-              method: "POST",
-              headers: {
-                "Content-Type": "application/json",
-              },
-              body: JSON.stringify(data),
-            });
-
-            const res = await req.json();
-
-            if (res.status === 200) {
-              console.log(res);
-              resetForm();
-            }
-          }}
+          onSubmit={async ({ name, email, message }, { resetForm }) => {}}
         >
           {(formik) => (
-            <form
+            <motion.form
               onSubmit={formik.handleSubmit}
               className={styles["form-container"]}
+              initial={{ opacity: 0, y: 25 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{
+                ease: [0.1, 0.25, 0.3, 1],
+                duration: 1,
+                delay: 1,
+              }}
             >
               <div className={styles["floating-name-group"]}>
                 <Field
@@ -114,7 +109,7 @@ export default function ContactMe() {
                 <label htmlFor="message">How can I help?</label>
               </div>
               <Button type="submit" text="Send Message" />
-            </form>
+            </motion.form>
           )}
         </Formik>
       </div>

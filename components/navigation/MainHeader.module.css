@@ -3,14 +3,23 @@
   justify-content: space-between;
   align-items: center;
   /* padding: 2em 1em; */
-  padding: 1em 2.5em 0.2em 2.5em;
+  padding: 1em 36px;
   position: fixed;
   width: 100%;
   z-index: 102;
+  background-color: var(--primary-background);
 }
 
 @media (min-width: 880px) {
   .header {
+    padding-inline: 96px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .header {
+    padding-top: 0;
+    padding-bottom: 0;
     padding-inline: 96px;
     height: 120px;
   }

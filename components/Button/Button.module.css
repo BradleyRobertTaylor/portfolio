@@ -5,14 +5,19 @@
   background-color: transparent;
   border: none;
   color: var(--secondary-text-grey);
-  padding: 0;
+  padding: 0.2em;
   cursor: pointer;
   transition: color 0.4s;
 }
 
-.button:hover,
-.button:focus {
+.button:hover {
   color: var(--link-hover);
+}
+
+.button:focus-visible {
+  color: var(--link-hover);
+  outline: 1px solid blue;
+  border-radius: 10px;
 }
 
 .button span {

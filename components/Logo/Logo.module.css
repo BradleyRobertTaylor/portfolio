@@ -3,9 +3,10 @@
   text-align: center;
   font-size: 1.125rem;
   letter-spacing: 0.1em;
+  padding: 0.2rem;
 }
 
-.logo svg {
-  fill: var(--primary-logo);
-  width: 50px;
+.logo:focus-visible {
+  outline: 1px solid blue;
+  border-radius: 10px;
 }

@@ -1,95 +1,32 @@
 import { motion } from "framer-motion";
-
 import styles from "./HamburgerMenu.module.css";
 
-const hamburgerVariants = {
-  drawerIsOpen: {
-    rotate: -90,
-    transition: { delayChildren: 0.2 },
-  },
-  drawerIsClosed: {
-    rotate: 0,
-    transition: { delayChildren: 0.2 },
-  },
-};
-
-// const topLineVariant = {
-//   drawerIsOpen: {
-//     rotate: -60,
-//     y: 8,
-//     x: -17,
-//     transition: {
-//       duration: 0.2,
-//     },
-//   },
-//   drawerIsClosed: {
-//     rotate: 0,
-//     y: 0,
-//     x: 0,
-//     transition: {
-//       duration: 0.2,
-//     },
-//   },
-// };
-//
-// const middleLineVariant = {
-//   drawerIsOpen: {
-//     rotate: 60,
-//     y: -11,
-//     x: 20,
-//     transition: {
-//       duration: 0.2,
-//     },
-//   },
-//   drawerIsClosed: {
-//     rotate: 0,
-//     y: 0,
-//     x: 0,
-//     transition: {
-//       duration: 0.2,
-//     },
-//   },
-// };
-
-export default function HamburgerMenu(props) {
+export default function HamburgerMenu({
+  onClick,
+  path01Variants,
+  path02Variants,
+  path01Controls,
+  path02Controls,
+}) {
   return (
     <button
       className={styles["hamburger-button"]}
       aria-controls="primary-navigation"
       aria-expanded="false"
-      onClick={props.onClick}
+      onClick={onClick}
     >
-      <motion.svg
-        variants={hamburgerVariants}
-        animate={props.isOpen ? "drawerIsOpen" : "drawerIsClosed"}
-        className="hamburger"
-        viewBox="0 0 100 100"
-      >
-        <motion.rect
-          width="80"
-          height="10"
-          x="10"
-          y="25"
-          className="line line__top"
-          rx="5"
-        ></motion.rect>
-        <motion.rect
-          width="80"
-          height="10"
-          x="10"
-          y="45"
-          className="line line__middle"
-          rx="5"
-        ></motion.rect>
-        <motion.rect
-          width="80"
-          height="10"
-          x="10"
-          y="65"
-          className="line line__bottom"
-          rx="5"
-        ></motion.rect>
-      </motion.svg>
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <motion.path
+          {...path01Variants.closed}
+          animate={path01Controls}
+          transition={{ duration: 0.2 }}
+        />
+        <motion.path
+          {...path02Variants.closed}
+          animate={path02Controls}
+          transition={{ duration: 0.2 }}
+        />
+      </svg>
     </button>
   );
 }

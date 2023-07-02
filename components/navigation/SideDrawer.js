@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 
 import styles from "./SideDrawer.module.css";
+import ThemeToggle from "../ThemeToggle/ThemeToggle";
 
 const drawerVariants = {
   drawerIsOpen: {
@@ -26,6 +27,9 @@ export default function SideDrawer(props) {
       variants={drawerVariants}
       exit={{ x: "100%", transition: { duration: 0.3 } }}
     >
+      <div className={styles["theme-toggle"]}>
+        <ThemeToggle />
+      </div>
       {props.children}
     </motion.aside>
   );

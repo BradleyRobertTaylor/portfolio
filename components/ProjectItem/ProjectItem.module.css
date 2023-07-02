@@ -30,6 +30,12 @@
   background: var(--button-hover);
 }
 
+.image-link:focus-visible {
+  border-color: var(--button-hover);
+  background: var(--button-hover);
+  outline: 1px solid blue;
+}
+
 .project-wrapper img {
   border-radius: 12px;
   aspect-ratio: 16 / 9;
@@ -92,8 +98,18 @@
   transition: color 0.4s;
 }
 
+.project-information__link {
+  padding: 0.2em;
+}
+
 .project-information__link:hover {
   color: var(--link-hover);
+}
+
+.project-information__link:focus-visible {
+  color: var(--link-hover);
+  outline: 1px solid blue;
+  border-radius: 10px;
 }
 
 .arrow-button {
@@ -110,10 +126,24 @@
   background-color: var(--button-hover);
 }
 
+.arrow-button:focus-visible {
+  background-color: var(--button-hover);
+  outline: 1px solid blue;
+}
+
 .arrow-button svg {
   display: block;
   width: 27px;
   transform: rotate(225deg);
+}
+
+.coming-soon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 5vw;
+  font-weight: 600;
+  aspect-ratio: 16 / 9;
 }
 
 @media (min-width: 800px) {

@@ -40,8 +40,10 @@ body {
   overflow: var(--hidden);
 }
 
-[data-hidden="hidden"] {
-  --hidden: hidden;
+@media (max-width: 1023px) {
+  [data-scroll-disabled="true"] {
+    --hidden: hidden;
+  }
 }
 
 body {
