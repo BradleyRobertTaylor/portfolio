@@ -1,3 +1,3 @@
-# Portfolio Project
+# Personal Portfolio Website
 
-Beginning iteration of my portfolio project using Next.js. Home page is partially done.
+Minimal and sleek portfolio website built using React, Next.js, and Framer Motion for a majority of the animations.
