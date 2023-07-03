@@ -6,6 +6,7 @@ import { Formik, Field, Form } from "formik";
 import * as Yup from "yup";
 import Button from "../Button/Button";
 import styles from "./contactme.module.css";
+import { sendContactForm } from "@/lib/api";
 
 export default function ContactMe() {
   function getErrorColor(formik, prop) {
@@ -35,7 +36,7 @@ export default function ContactMe() {
         >
           <h2 className={`${styles.title}`}>Contact</h2>
           <p>
-            Get in touch with me here or shoot me an email at{" "}
+            Get in touch with me here or shoot me an email directly at{" "}
             <Link target="_blank" href="mailto:taylorbradleyr@gmail.com">
               taylorbradleyr@gmail.com
             </Link>
@@ -56,7 +57,15 @@ export default function ContactMe() {
               .required("Required"),
             message: Yup.string().required("Required"),
           })}
-          onSubmit={async ({ name, email, message }, { resetForm }) => {}}
+          onSubmit={async ({ name, email, message }, { resetForm }) => {
+            let response = await sendContactForm({ name, email, message });
+            if (response.status === 200) {
+              resetForm();
+              alert(
+                "Your message was sent successfully! I'll get back to you as soon as I can."
+              );
+            }
+          }}
         >
           {(formik) => (
             <motion.form

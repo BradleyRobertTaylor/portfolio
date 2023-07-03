@@ -38,6 +38,7 @@
 }
 
 .section-head a {
+  font-weight: 600;
   transition: color 0.4s;
   padding: 0.2em;
 }
