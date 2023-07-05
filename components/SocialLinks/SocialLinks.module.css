@@ -24,10 +24,12 @@
   .social-links-wrapper svg {
     width: 20px;
     fill: var(--secondary-text-grey);
-    transition: fill 0.4s;
+    stroke: var(--secondary-text-grey);
+    transition: all 0.4s;
   }
 
   .social-links-wrapper svg:hover {
     fill: var(--link-hover);
+    stroke: var(--link-hover);
   }
 }
