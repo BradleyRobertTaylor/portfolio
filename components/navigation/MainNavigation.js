@@ -2,7 +2,7 @@
 
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
-import { motion, useAnimationControls, AnimatePresence } from "framer-motion";
+import { useAnimationControls, AnimatePresence } from "framer-motion";
 import HamburgerMenu from "./HamburgerMenu";
 import MainHeader from "./MainHeader";
 
