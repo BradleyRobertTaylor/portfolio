@@ -45,12 +45,8 @@ export default function Navbar() {
     hamburgerButton.setAttribute("aria-expanded", true);
   };
 
-  const closeDrawerHandler = async () => {
+  const closeDrawerHandler = () => {
     setDrawerIsOpen(false);
-
-    path01Controls.start(path01Variants.closed);
-    await path02Controls.start(path02Variants.moving);
-    path02Controls.start(path02Variants.closed);
 
     const hamburgerButton = document.querySelector(
       '[aria-controls="primary-navigation"]'
@@ -63,14 +59,16 @@ export default function Navbar() {
 
   const pathname = usePathname();
 
+  // If drawer is opened after pathname changes we should animate the hamburger
+  // menu button to closed
   useEffect(() => {
     if (drawerIsOpen) {
-      setDrawerIsOpen((state) => !state);
+      (async () => {
+        path01Controls.start(path01Variants.closed);
+        await path02Controls.start(path02Variants.moving);
+        path02Controls.start(path02Variants.closed);
+      })();
     }
-
-    return () => {
-      document.body.removeAttribute("data-scroll-disabled");
-    };
   }, [pathname]);
 
   return (
@@ -85,7 +83,7 @@ export default function Navbar() {
               />
               <SideDrawer>
                 <nav className={styles["main-navigation-drawer-nav"]}>
-                  <NavLinks inSideDrawer={true} />
+                  <NavLinks onClick={closeDrawerHandler} />
                 </nav>
               </SideDrawer>
             </>

@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import styles from "./AboutCoverPhoto.module.css";
-import headshot from "../../public/images/IMG_5850 1.png";
+import headshot from "../../public/images/headshot.png";
 
 export default function AboutCoverPhoto() {
   return (
