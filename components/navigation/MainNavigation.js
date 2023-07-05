@@ -1,6 +1,6 @@
 "use client";
 
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { useState, useEffect } from "react";
 import { useAnimationControls, AnimatePresence } from "framer-motion";
 import HamburgerMenu from "./HamburgerMenu";
@@ -45,12 +45,16 @@ export default function Navbar() {
     hamburgerButton.setAttribute("aria-expanded", true);
   };
 
-  const closeDrawerHandler = () => {
+  const closeDrawerHandler = async () => {
     setDrawerIsOpen(false);
 
     const hamburgerButton = document.querySelector(
       '[aria-controls="primary-navigation"]'
     );
+
+    path01Controls.start(path01Variants.closed);
+    await path02Controls.start(path02Variants.moving);
+    path02Controls.start(path02Variants.closed);
 
     document.body.removeAttribute("data-scroll-disabled");
 
@@ -59,17 +63,38 @@ export default function Navbar() {
 
   const pathname = usePathname();
 
-  // If drawer is opened after pathname changes we should animate the hamburger
-  // menu button to closed
   useEffect(() => {
     if (drawerIsOpen) {
-      (async () => {
-        path01Controls.start(path01Variants.closed);
-        await path02Controls.start(path02Variants.moving);
-        path02Controls.start(path02Variants.closed);
-      })();
+      setDrawerIsOpen(false);
     }
+
+    return () => {
+      document.body.removeAttribute("data-scroll-disabled");
+    };
   }, [pathname]);
+
+  // useEffect to deal with edge case of /#projects not being a normal path
+  // but just a hash. usePathname does not detect the hash path.
+  const router = useRouter();
+  useEffect(() => {
+    const projectLinks = document.querySelectorAll('[href="#projects"]');
+    const projectLinkClickHandler = async (event) => {
+      event.preventDefault();
+
+      closeDrawerHandler();
+      router.push("#projects");
+    };
+
+    projectLinks.forEach((projectLink) => {
+      projectLink.addEventListener("click", projectLinkClickHandler);
+    });
+
+    return () => {
+      projectLinks.forEach((projectLink) => {
+        projectLink.removeEventListener("click", projectLinkClickHandler);
+      });
+    };
+  });
 
   return (
     <>
@@ -83,7 +108,7 @@ export default function Navbar() {
               />
               <SideDrawer>
                 <nav className={styles["main-navigation-drawer-nav"]}>
-                  <NavLinks onClick={closeDrawerHandler} />
+                  <NavLinks />
                 </nav>
               </SideDrawer>
             </>
