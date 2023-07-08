@@ -10,7 +10,7 @@
 .hidden {
   display: none;
 }
-@media (max-width: 1023px) {
+@media (max-width: 1089px) {
   .main-navigation {
     display: none;
   }

@@ -15,7 +15,7 @@
   border-radius: 10px;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1090px) {
   .social-links-wrapper {
     display: flex;
     gap: 2rem;
