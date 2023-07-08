@@ -1,7 +1,5 @@
-import projectGif from "../public/screen-recording.gif";
-import screenShot1 from "../public/Dribbble-shot-HD-ss-1.webp";
-import screenShot2 from "../public/Screen-Shot-2019-11-23-at-2-15-47-PM.webp";
-import screenShot3 from "../public/Screenshot-2020-05-04-at-4-34-31-AM.webp";
+// import projectGif from "../public/screen-recording.gif";
+import todosGif from "../public/todos.gif";
 
 export const projects = [
   // {
@@ -15,37 +13,15 @@ export const projects = [
   //   url: "https://github.com/BradleyRobertTaylor",
   //   githubUrl: "https://github.com/BradleyRobertTaylor",
   // },
-  // {
-  //   id: 2,
-  //   screenshot: screenShot1,
-  //   alt: "Placefiller project",
-  //   title: "Placefiller",
-  //   description:
-  //     "Piggment is a curated collection of amazingly colored gradients for designers, developers, and smart creators over the world. now you can generate, explore, save, easy CSS cross-browser gradient codes all in one place.",
-  //   technologies: ["JavaScript", "React", "Next.js", "MongoDB"],
-  //   url: "https://github.com/BradleyRobertTaylor",
-  //   githubUrl: "https://github.com/BradleyRobertTaylor",
-  // },
-  // {
-  //   id: 3,
-  //   screenshot: screenShot2,
-  //   alt: "Placefiller project",
-  //   title: "Placefiller",
-  //   description:
-  //     "Piggment is a curated collection of amazingly colored gradients for designers, developers, and smart creators over the world. now you can generate, explore, save, easy CSS cross-browser gradient codes all in one place.",
-  //   technologies: ["JavaScript", "React", "Next.js", "MongoDB"],
-  //   url: "https://github.com/BradleyRobertTaylor",
-  //   githubUrl: "https://github.com/BradleyRobertTaylor",
-  // },
-  // {
-  //   id: 4,
-  //   screenshot: screenShot3,
-  //   alt: "Placefiller project",
-  //   title: "Placefiller",
-  //   description:
-  //     "Piggment is a curated collection of amazingly colored gradients for designers, developers, and smart creators over the world. now you can generate, explore, save, easy CSS cross-browser gradient codes all in one place.",
-  //   technologies: ["JavaScript", "React", "Next.js", "MongoDB"],
-  //   url: "https://github.com/BradleyRobertTaylor",
-  //   githubUrl: "https://github.com/BradleyRobertTaylor",
-  // },
+  {
+    id: 1,
+    screenshot: todosGif,
+    alt: "Gif of the Todos application",
+    title: "Todos",
+    description:
+      "Todos is an application to for managing todos with dynamic filtering based on dates and completed todos. It was written with vanilla JS, Handlebars, and SQLite. Todos are sorted and grouped together based on the month and year. They are also sorted with the completed todos at the end of the list. Express was used with SQLite3 to persist todo data.",
+    technologies: ["JavaScript", "Express", "Handlebars", "SQLite", "Node"],
+    url: "",
+    githubUrl: "https://github.com/BradleyRobertTaylor/todos-project",
+  },
 ];

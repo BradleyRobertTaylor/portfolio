@@ -65,7 +65,7 @@ export default function ProjectCard({
         className={styles["big-number"]}
       >{`0${id}`}</motion.div>
       <Link className={styles["image-link"]} target="_blank" href={`${url}`}>
-        <Image src={screenshot} alt={alt} />
+        <Image priority src={screenshot} alt={alt} />
       </Link>
       <div className={styles["information-wrapper"]}>
         <div>
@@ -105,16 +105,20 @@ export default function ProjectCard({
           viewport={{ once: true, amount: 1 }}
           className={styles["links-wrapper"]}
         >
-          <div className={styles["project-information__heading"]}>
-            Live Site
-          </div>
-          <Link
-            className={styles["project-information__link"]}
-            target="_blank"
-            href={url}
-          >
-            {url}
-          </Link>
+          {url && (
+            <>
+              <div className={styles["project-information__heading"]}>
+                Live Site
+              </div>
+              <Link
+                className={styles["project-information__link"]}
+                target="_blank"
+                href={url}
+              >
+                {url}
+              </Link>
+            </>
+          )}
           <div className={styles["project-information__heading"]}>GitHub</div>
           <Link
             className={styles["project-information__link"]}
@@ -156,7 +160,7 @@ export default function ProjectCard({
           >
             <Link
               target="_blank"
-              href={`${url}`}
+              href={url ? url : githubUrl}
               className={styles["arrow-button"]}
             >
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
