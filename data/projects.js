@@ -1,6 +1,5 @@
 // import projectGif from "../public/screen-recording.gif";
 import todosGif from "../public/todos.gif";
-import familyMatters from "../public/images/family-matters.png";
 
 export const projects = [
   // {
