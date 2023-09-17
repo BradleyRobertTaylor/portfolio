@@ -25,15 +25,4 @@ export const projects = [
     url: "",
     githubUrl: "https://github.com/BradleyRobertTaylor/todos-project",
   },
-  {
-    id: 2,
-    screenshot: familyMatters,
-    alt: "Screenshot of home image of Family Matters and Mentors website",
-    title: "Family Matters & Mentors",
-    description:
-      "Family Matters & Mentors is a website that allows users to schedule appointments and purchase an online 12 week course. It's built with React and Next.js.",
-    technologies: ["Next.js", "React", "JavaScript"],
-    url: "https://family-matters-mentors-gh9hvgrmd-bradleyroberttaylor.vercel.app/",
-    githubUrl: "https://github.com/BradleyRobertTaylor/family-matters-mentors",
-  },
 ];
