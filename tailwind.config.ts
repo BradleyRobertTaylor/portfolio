@@ -14,8 +14,10 @@ export default {
       fontFamily: {
         sans: ["var(--font-sans)", ...fontFamily.sans],
       },
+      // screens: {
+      //   md: "800px",
+      // },
     },
   },
   plugins: [],
 } satisfies Config;
-
