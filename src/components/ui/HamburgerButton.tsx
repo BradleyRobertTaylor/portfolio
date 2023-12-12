@@ -13,9 +13,7 @@ interface HamburgerButtonProps {
   handleDrawer: () => void;
 }
 
-export default function HamburgerButton({
-  handleDrawer,
-}: HamburgerButtonProps) {
+export function HamburgerButton({ handleDrawer }: HamburgerButtonProps) {
   return (
     <button onClick={handleDrawer} className="z-50">
       <svg

@@ -6,7 +6,7 @@ interface NavLinksProps {
   variant: "mobile" | "desktop";
 }
 
-export default function NavLinks({ variant }: NavLinksProps) {
+export function NavLinks({ variant }: NavLinksProps) {
   const mobileListStyles =
     "p-9 sm:p-24 flex h-full flex-col items-center justify-center gap-4";
 
@@ -16,7 +16,7 @@ export default function NavLinks({ variant }: NavLinksProps) {
   const desktopListStyles = "flex gap-12";
 
   const desktopListItemStyles =
-    "text-neutral-600 dark:text-neutral-400 hover:text-black dark:hover:text-white";
+    "font-medium text-neutral-500 dark:text-neutral-400 hover:text-black dark:hover:text-white";
 
   return (
     <nav className={cn(variant === "mobile" && "h-full")}>
@@ -33,7 +33,7 @@ export default function NavLinks({ variant }: NavLinksProps) {
                 variant === "mobile"
                   ? mobileListItemStyles
                   : desktopListItemStyles,
-                "transition-colors duration-300",
+                "transition-colors duration-500",
               )}
             >
               <Link href={href}>{title}</Link>

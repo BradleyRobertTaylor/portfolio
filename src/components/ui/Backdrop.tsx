@@ -2,7 +2,7 @@ interface BackdropProps {
   closeDrawer: () => void;
 }
 
-export default function Backdrop({ closeDrawer }: BackdropProps) {
+export function Backdrop({ closeDrawer }: BackdropProps) {
   return (
     <div
       onClick={closeDrawer}

@@ -1,9 +1,9 @@
-import NavLinks from "./NavLinks";
-import SocialLinks from "./SocialLinks";
-import ThemeToggle from "./ThemeToggle";
-import Logo from "./ui/Logo";
+import { NavLinks } from "./NavLinks";
+import { SocialLinks } from "./SocialLinks";
+import { ThemeToggle } from "./ThemeToggle";
+import { Logo } from "./ui/Logo";
 
-export default function DesktopNav() {
+export function DesktopNav() {
   return (
     <div className="hidden lg:flex gap-12 text-sm justify-between items-center uppercase font-medium">
       <div className="flex gap-12 items-center">

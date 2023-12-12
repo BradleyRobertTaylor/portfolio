@@ -1,12 +1,12 @@
 "use client";
 
 import { useState } from "react";
-import HamburgerButton from "./ui/HamburgerButton";
-import Logo from "./ui/Logo";
-import SideDrawer from "./SideDrawer";
-import Backdrop from "./ui/Backdrop";
+import { HamburgerButton } from "./ui/HamburgerButton";
+import { Logo } from "./ui/Logo";
+import { SideDrawer } from "./SideDrawer";
+import { Backdrop } from "./ui/Backdrop";
 
-export default function MobileNav() {
+export function MobileNav() {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const handleCloseDrawer = () => setIsDrawerOpen(false);
 

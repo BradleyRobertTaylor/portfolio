@@ -1,23 +1,28 @@
 import Link from "next/link";
 
-export default function SocialLinks() {
+export function SocialLinks() {
   return (
-    <div className="hidden min-[1124px]:flex gap-8 items-center">
+    <div className="flex gap-8 items-center">
       <Link
         target="_blank"
         href="https://www.linkedin.com/in/BradleyRobertTaylor/"
+        className="hidden min-[1124px]:block"
       >
         <svg
-          className="w-6 fill-neutral-600 hover:fill-black dark:fill-neutral-400 dark:hover:fill-white transition-colors duration-300"
+          className="w-6 fill-neutral-500 hover:fill-black dark:fill-neutral-400 dark:hover:fill-white transition-colors duration-500"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
         >
           <path d="M6.94 5a2 2 0 11-4-.002 2 2 0 014 .002zM7 8.48H3V21h4V8.48zm6.32 0H9.34V21h3.94v-6.57c0-3.66 4.77-4 4.77 0V21H22v-7.93c0-6.17-7.06-5.94-8.72-2.91l.04-1.68z"></path>
         </svg>
       </Link>
-      <Link target="_blank" href="https://github.com/BradleyRobertTaylor">
+      <Link
+        className="hidden min-[1124px]:block"
+        target="_blank"
+        href="https://github.com/BradleyRobertTaylor"
+      >
         <svg
-          className="w-6 fill-neutral-600 hover:fill-black dark:fill-neutral-400 dark:hover:fill-white transition-colors duration-300"
+          className="w-6 fill-neutral-500 hover:fill-black dark:fill-neutral-400 dark:hover:fill-white transition-colors duration-500"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
         >
@@ -26,7 +31,7 @@ export default function SocialLinks() {
       </Link>
       <Link target="_blank" href="/resume.pdf">
         <svg
-          className="w-6 stroke-neutral-600 fill-neutral-50 hover:stroke-black dark:stroke-neutral-400 dark:fill-neutral-950 dark:hover:stroke-white transition-colors duration-300"
+          className="w-6 stroke-neutral-500 fill-neutral-50 hover:stroke-black dark:stroke-neutral-400 dark:fill-neutral-950 dark:hover:stroke-white transition-colors duration-500"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
         >
