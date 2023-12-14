@@ -1,3 +1,4 @@
+import { GITHUB_URL, LINKED_IN_URL } from "@/data/constants";
 import Link from "next/link";
 
 export function SocialLinks() {
@@ -5,7 +6,7 @@ export function SocialLinks() {
     <div className="flex gap-8 items-center">
       <Link
         target="_blank"
-        href="https://www.linkedin.com/in/BradleyRobertTaylor/"
+        href={LINKED_IN_URL}
         className="hidden min-[1124px]:block"
       >
         <svg
@@ -19,7 +20,7 @@ export function SocialLinks() {
       <Link
         className="hidden min-[1124px]:block"
         target="_blank"
-        href="https://github.com/BradleyRobertTaylor"
+        href={GITHUB_URL}
       >
         <svg
           className="w-6 fill-neutral-500 hover:fill-black dark:fill-neutral-400 dark:hover:fill-white transition-colors duration-500"

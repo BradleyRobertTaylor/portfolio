@@ -1,3 +1,4 @@
+import { EMAIL, GITHUB_URL, LINKED_IN_URL } from "@/data/constants";
 import Link from "next/link";
 
 export function Footer() {
@@ -9,8 +10,8 @@ export function Footer() {
       </h2>
       <ul className="flex flex-col gap-6 md:flex-row md:items-center md:gap-12 md:flex-1 xl:justify-end">
         <li className="text-xl font-semibold flex-1 xl:flex-none">
-          <Link target="_blank" href="mailto:taylorbradleyr@gmail.com">
-            taylorbradleyr@gmail.com
+          <Link target="_blank" href={`mailto:${EMAIL}`}>
+            {EMAIL}
           </Link>
         </li>
         <li>
@@ -25,16 +26,16 @@ export function Footer() {
         <li>
           <Link
             target="_blank"
-            href="https://www.linkedin.com/in/BradleyRobertTaylor/"
+            href={LINKED_IN_URL}
             className="font-medium text-neutral-500 dark:text-neutral-400 hover:text-black dark:hover:text-white transition-colors duration-500"
           >
-            Linkedin
+            LinkedIn
           </Link>
         </li>
         <li>
           <Link
             target="_blank"
-            href="https://github.com/BradleyRobertTaylor"
+            href={GITHUB_URL}
             className="font-medium text-neutral-500 dark:text-neutral-400 hover:text-black dark:hover:text-white transition-colors duration-500"
           >
             Github

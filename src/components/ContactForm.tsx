@@ -106,7 +106,9 @@ export function ContactForm() {
             />
           </CardContent>
           <CardFooter>
-            <Button type="submit">Send Message</Button>
+            <Button type="submit" variant="outline">
+              Send Message
+            </Button>
           </CardFooter>
         </Card>
       </form>

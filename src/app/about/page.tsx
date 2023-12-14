@@ -1,3 +1,11 @@
+import { AboutPageHero } from "@/components/AboutPageHero";
+import { HeadshotSection } from "@/components/HeadshotSection";
+
 export default function About() {
-  return <div>About Page</div>;
+  return (
+    <main>
+      <AboutPageHero />
+      <HeadshotSection />
+    </main>
+  );
 }
