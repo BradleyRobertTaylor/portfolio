@@ -11,7 +11,7 @@ export function AboutPageHero() {
         </h1>
       </div>
       <div className="absolute bottom-6 right-9 lg:bottom-24 lg:right-24">
-        <ArrowButton size="large" href="/about#headshot" />
+        <ArrowButton size="large" href="/about#background" />
       </div>
     </section>
   );

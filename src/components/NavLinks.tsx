@@ -1,5 +1,8 @@
+"use client";
+
 import { navigation } from "@/data/navigation";
 import { cn } from "@/lib/utils";
+import { motion } from "framer-motion";
 import Link from "next/link";
 
 interface NavLinksProps {
@@ -18,6 +21,16 @@ export function NavLinks({ variant }: NavLinksProps) {
   const desktopListItemStyles =
     "font-medium text-neutral-500 dark:text-neutral-400 hover:text-black dark:hover:text-white";
 
+  const drawerLink = {
+    drawerIsOpen: {
+      opacity: 1,
+    },
+    drawerIsClosed: {
+      opacity: 0,
+      transition: { duration: 0.1 },
+    },
+  };
+
   return (
     <nav className={cn(variant === "mobile" && "h-full")}>
       <ul
@@ -27,7 +40,7 @@ export function NavLinks({ variant }: NavLinksProps) {
       >
         {navigation.map(({ href, title }) => {
           return (
-            <li
+            <motion.li
               key={title}
               className={cn(
                 variant === "mobile"
@@ -35,9 +48,10 @@ export function NavLinks({ variant }: NavLinksProps) {
                   : desktopListItemStyles,
                 "transition-colors duration-500",
               )}
+              variants={drawerLink}
             >
               <Link href={href}>{title}</Link>
-            </li>
+            </motion.li>
           );
         })}
       </ul>

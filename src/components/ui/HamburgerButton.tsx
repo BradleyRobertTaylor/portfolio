@@ -15,7 +15,7 @@ interface HamburgerButtonProps {
 
 export function HamburgerButton({ handleDrawer }: HamburgerButtonProps) {
   return (
-    <button onClick={handleDrawer} className="z-50">
+    <button onClick={handleDrawer} className="relative z-50">
       <svg
         className="block w-8 stroke-neutral-950 dark:stroke-neutral-50"
         viewBox="0 0 24 24"

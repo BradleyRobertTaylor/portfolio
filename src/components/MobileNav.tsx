@@ -1,21 +1,15 @@
-"use client";
-
-import { useState } from "react";
 import { HamburgerButton } from "./ui/HamburgerButton";
 import { Logo } from "./ui/Logo";
-import { SideDrawer } from "./SideDrawer";
-import { Backdrop } from "./ui/Backdrop";
 
-export function MobileNav() {
-  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
-  const handleCloseDrawer = () => setIsDrawerOpen(false);
+interface MobileNavProps {
+  handleDrawer: () => void;
+}
 
+export function MobileNav({ handleDrawer }: MobileNavProps) {
   return (
     <div className="lg:hidden flex justify-between items-center">
       <Logo />
-      <HamburgerButton handleDrawer={() => setIsDrawerOpen(!isDrawerOpen)} />
-      {isDrawerOpen && <Backdrop closeDrawer={handleCloseDrawer} />}
-      {isDrawerOpen && <SideDrawer />}
+      <HamburgerButton handleDrawer={handleDrawer} />
     </div>
   );
 }

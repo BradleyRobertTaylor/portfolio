@@ -5,3 +5,14 @@
 * {
   scroll-behavior: smooth !important;
 }
+
+/* mask for technology display */
+.mask {
+  mask-image: linear-gradient(
+    90deg,
+    transparent 5%,
+    rgba(0, 0, 0, 1) 50%,
+    rgba(0, 0, 0, 1) 50%,
+    transparent 95%
+  );
+}

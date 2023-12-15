@@ -1,3 +1,7 @@
+"use client";
+
+import { motion } from "framer-motion";
+
 import { ArrowButton } from "./ui/ArrowButton";
 import { GradientText } from "./ui/GradientText";
 
