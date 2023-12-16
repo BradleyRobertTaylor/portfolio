@@ -27,14 +27,20 @@ export function Header() {
   });
 
   return (
-    <motion.header
-      variants={navVariants}
-      animate={navIsHidden ? "hidden" : "visible"}
-      transition={{ ease: "easeInOut", duration: 0.5 }}
-      className="w-full max-w-[1980px] z-30 px-9 py-4 md:px-24 md:py-10 fixed bg-neutral-50 dark:bg-neutral-950"
+    <motion.div
+      initial={{ opacity: 0, y: -25 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ ease: [0.1, 0.25, 0.3, 1], duration: 1 }}
     >
-      <DesktopNav />
-      <MobileNav />
-    </motion.header>
+      <motion.header
+        variants={navVariants}
+        animate={navIsHidden ? "hidden" : "visible"}
+        transition={{ ease: "easeInOut", duration: 0.5 }}
+        className="w-full max-w-[1980px] z-30 px-9 py-4 md:px-24 md:py-10 fixed bg-neutral-50 dark:bg-neutral-950"
+      >
+        <DesktopNav />
+        <MobileNav />
+      </motion.header>
+    </motion.div>
   );
 }

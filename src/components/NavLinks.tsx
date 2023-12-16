@@ -69,7 +69,7 @@ export function NavLinks({ variant, onCloseDrawer }: NavLinksProps) {
                   {title}
                 </Link>
               ) : (
-                <Link href={href}>{title}</Link>
+                <a href={href}>{title}</a>
               )}
             </motion.li>
           );

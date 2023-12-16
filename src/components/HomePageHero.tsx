@@ -8,7 +8,16 @@ import { GradientText } from "./ui/GradientText";
 export function HomePageHero() {
   return (
     <section className="z-0 relative p-9 md:p-24 h-[90vh] lg:h-screen flex flex-col justify-center">
-      <div className="flex flex-col column justify-around gap-12 md:max-w-[70%]">
+      <motion.div
+        initial={{ opacity: 0, x: -25 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{
+          ease: [0.1, 0.25, 0.3, 1],
+          duration: 1,
+          delay: 0.5,
+        }}
+        className="flex flex-col column justify-around gap-12 md:max-w-[70%]"
+      >
         <h1 className="font-black text-5xl lg:text-[4rem] xl:text-[5rem] leading-[1.1em] tracking-tight">
           Hello <span className="md:hidden">-</span>
           <span className="hidden md:inline">&#8212;</span> I&apos;m Brad.
@@ -16,13 +25,22 @@ export function HomePageHero() {
           <GradientText>Software Engineer.</GradientText>
         </h1>
         <p className="font-semibold text-xl lg:text-2xl">
-          Recently I built SmoothSail, a feature flag management tool for
-          decoupling deployment from release with user targeting capabilities.
+          Recently I built{" "}
+          <span className="font-raleway text-[1.7rem] font-light">
+            SmoothSail
+          </span>
+          , a feature flag management tool for decoupling deployment from
+          release with user targeting capabilities.
         </p>
-      </div>
-      <div className="absolute bottom-6 right-9 lg:bottom-24 lg:right-24">
-        <ArrowButton size="large" href="/#projects" />
-      </div>
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0, y: -25 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ ease: [0.1, 0.25, 0.3, 1], duration: 1, delay: 1 }}
+        className="absolute bottom-6 right-9 lg:bottom-24 lg:right-24"
+      >
+        <ArrowButton animate size="large" href="/#projects" />
+      </motion.div>
     </section>
   );
 }

@@ -13,6 +13,7 @@ export default {
     extend: {
       fontFamily: {
         sans: ["var(--font-sans)", ...fontFamily.sans],
+        raleway: ["var(--raleway)"],
       },
       // screens: {
       //   md: "800px",

@@ -23,6 +23,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Textarea } from "./ui/textarea";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 const contactFormSchema = z.object({
   name: z.string().trim().min(1),
@@ -48,7 +49,17 @@ export function ContactForm() {
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+      <motion.form
+        initial={{ opacity: 0, y: 25 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{
+          ease: [0.1, 0.25, 0.3, 1],
+          duration: 1,
+          delay: 0.5,
+        }}
+        onSubmit={form.handleSubmit(onSubmit)}
+        className="space-y-8"
+      >
         <Card className="border-none">
           <CardHeader>
             <CardTitle className="text-4xl font-bold">Contact</CardTitle>
@@ -111,7 +122,7 @@ export function ContactForm() {
             </Button>
           </CardFooter>
         </Card>
-      </form>
+      </motion.form>
     </Form>
   );
 }
