@@ -60,14 +60,15 @@ export function NavLinks({ variant, onCloseDrawer }: NavLinksProps) {
               variants={drawerLink}
             >
               {variant === "mobile" ? (
-                <Link
+                <a
                   href={href}
-                  onClick={() => {
+                  onClick={(e) => {
+                    e.preventDefault();
                     handleMobileNavigation(href);
                   }}
                 >
                   {title}
-                </Link>
+                </a>
               ) : (
                 <a href={href}>{title}</a>
               )}

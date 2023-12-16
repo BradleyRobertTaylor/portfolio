@@ -20,12 +20,17 @@ export function MobileNav() {
   };
 
   useEffect(() => {
+    const html = document.getElementById("html")!;
     if (isDrawerOpen) {
+      html.classList.add("overflow-y-hidden");
+      html.classList.add("lg:overflow-y-auto");
       document.body.classList.add("overflow-y-hidden");
       document.body.classList.add("lg:overflow-y-auto");
     } else {
       document.body.classList.remove("overflow-y-hidden");
       document.body.classList.remove("lg:overflow-y-auto");
+      html.classList.remove("overflow-y-hidden");
+      html.classList.remove("lg:overflow-y-auto");
     }
   }, [isDrawerOpen]);
 

@@ -7,7 +7,7 @@ import { GradientText } from "./ui/GradientText";
 
 export function AboutPageHero() {
   return (
-    <section className="z-0 relative p-9 pt-28 md:p-24 md:pt-44 h-[70vh] md:h-[80vh] flex flex-col">
+    <section className="z-0 relative p-9 pt-28 md:p-24 md:pt-44 md:h-[100vh] flex flex-col">
       <div className="flex flex-col column justify-around gap-12 md:w-[75%]">
         <motion.h1
           initial={{ opacity: 0, x: -25 }}
@@ -17,7 +17,7 @@ export function AboutPageHero() {
             duration: 1,
             delay: 0.5,
           }}
-          className="font-bold text-4xl lg:text-7xl leading-[2em] tracking-tight"
+          className="font-bold text-4xl md:text-5xl lg:text-7xl leading-[2em] tracking-tight"
         >
           I develop <GradientText>web applications</GradientText> that are
           robust and scalable while providing an intuitive user interface.
