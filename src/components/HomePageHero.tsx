@@ -31,7 +31,7 @@ export function HomePageHero() {
           <Link
             href={SMOOTH_SAIL_BASE_URL}
             target="_blank"
-            className="font-raleway text-[1.7rem] font-light hover:text-[#23395A] transition duration-300"
+            className="font-raleway text-[1.7rem] font-light hover:text-[#239DB8] transition duration-300"
           >
             SmoothSail
           </Link>
