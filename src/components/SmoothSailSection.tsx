@@ -109,7 +109,7 @@ export function SmoothSailSection() {
               <Link
                 href={SMOOTH_SAIL_CASE_STUDY_URL}
                 target="_blank"
-                className="text-neutral-500 hover:text-black dark:text-neutral-400 dark:hover:text-white text-sm transition-colors duration-500"
+                className="text-neutral-500 hover:text-black dark:text-neutral-400 dark:hover:text-white text-sm transition-colors duration-300"
               >
                 {SMOOTH_SAIL_CASE_STUDY_URL}
               </Link>
@@ -121,7 +121,7 @@ export function SmoothSailSection() {
                   <Link
                     href={SMOOTH_SAIL_GITHUB_URL}
                     target="_blank"
-                    className="text-neutral-500 hover:text-black dark:text-neutral-400 dark:hover:text-white text-sm transition-colors duration-500"
+                    className="text-neutral-500 hover:text-black dark:text-neutral-400 dark:hover:text-white text-sm transition-colors duration-300"
                   >
                     {SMOOTH_SAIL_GITHUB_URL}
                   </Link>

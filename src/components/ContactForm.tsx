@@ -24,6 +24,8 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "./ui/textarea";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { sendContactForm } from "@/actions/email";
+import { useToast } from "./ui/use-toast";
 
 const contactFormSchema = z.object({
   name: z.string().trim().min(1),
@@ -31,9 +33,10 @@ const contactFormSchema = z.object({
   message: z.string().min(1),
 });
 
-type ContactFormInputs = z.infer<typeof contactFormSchema>;
+export type ContactFormInputs = z.infer<typeof contactFormSchema>;
 
 export function ContactForm() {
+  const { toast } = useToast();
   const form = useForm<ContactFormInputs>({
     resolver: zodResolver(contactFormSchema),
     defaultValues: {
@@ -43,8 +46,21 @@ export function ContactForm() {
     },
   });
 
-  const onSubmit = (values: ContactFormInputs) => {
-    console.log(values);
+  const onSubmit = async (values: ContactFormInputs) => {
+    try {
+      await sendContactForm(values);
+      toast({
+        title: "Email was successfully sent!",
+        description: "Thanks I'll get back to you as soon as I can.",
+      });
+      form.reset();
+    } catch (err) {
+      toast({
+        variant: "destructive",
+        title: "Uh oh! Something went wrong.",
+        description: "Please try to send again or email me directly.",
+      });
+    }
   };
 
   return (
@@ -68,7 +84,7 @@ export function ContactForm() {
               <Link
                 target="_blank"
                 href="mailto:taylorbradleyr@gmail.com"
-                className="font-bold hover:text-black dark:hover:text-white transition-colors duration-500"
+                className="font-bold hover:text-black dark:hover:text-white transition-colors duration-300"
               >
                 taylorbradleyr@gmail.com
               </Link>

@@ -55,7 +55,7 @@ export function NavLinks({ variant, onCloseDrawer }: NavLinksProps) {
                 variant === "mobile"
                   ? mobileListItemStyles
                   : desktopListItemStyles,
-                "transition-colors duration-500",
+                "transition-colors duration-300",
               )}
               variants={drawerLink}
             >

@@ -18,7 +18,7 @@ export function ProjectItem({ img, alt, title, description }: Project) {
       <Link
         target="_blank"
         href="#"
-        className="relative rounded-3xl p-4 bg-neutral-200 hover:bg-neutral-300 dark:bg-neutral-800 dark:hover:bg-neutral-700 grid place-items-center transition-colors duration-500"
+        className="relative rounded-3xl p-4 bg-neutral-200 hover:bg-neutral-300 dark:bg-neutral-800 dark:hover:bg-neutral-700 grid place-items-center transition-colors duration-300"
       >
         <Image
           src={img}

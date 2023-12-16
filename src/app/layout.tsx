@@ -6,6 +6,7 @@ import { ThemeProvider } from "@/providers/ThemeProvider";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { MenuAnimationProvider } from "@/providers/MenuAnimationProvider";
+import { Toaster } from "@/components/ui/toaster";
 
 const fontSans = FontSans({ subsets: ["latin"], variable: "--font-sans" });
 
@@ -42,6 +43,7 @@ export default function RootLayout({
           <MenuAnimationProvider>
             <Header />
             {children}
+            <Toaster />
             <Footer />
           </MenuAnimationProvider>
         </ThemeProvider>

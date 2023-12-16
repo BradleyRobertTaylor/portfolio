@@ -10,7 +10,7 @@ export function SocialLinks() {
         className="hidden min-[1124px]:block"
       >
         <svg
-          className="w-6 fill-neutral-500 hover:fill-black dark:fill-neutral-400 dark:hover:fill-white transition-colors duration-500"
+          className="w-6 fill-neutral-500 hover:fill-black dark:fill-neutral-400 dark:hover:fill-white transition-colors duration-300"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
         >
@@ -23,7 +23,7 @@ export function SocialLinks() {
         href={GITHUB_URL}
       >
         <svg
-          className="w-6 fill-neutral-500 hover:fill-black dark:fill-neutral-400 dark:hover:fill-white transition-colors duration-500"
+          className="w-6 fill-neutral-500 hover:fill-black dark:fill-neutral-400 dark:hover:fill-white transition-colors duration-300"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
         >
@@ -32,7 +32,7 @@ export function SocialLinks() {
       </Link>
       <Link target="_blank" href="/resume.pdf">
         <svg
-          className="w-6 stroke-neutral-500 fill-neutral-50 hover:stroke-black dark:stroke-neutral-400 dark:fill-neutral-950 dark:hover:stroke-white transition-colors duration-500"
+          className="w-6 stroke-neutral-500 fill-neutral-50 hover:stroke-black dark:stroke-neutral-400 dark:fill-neutral-950 dark:hover:stroke-white transition-colors duration-300"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
         >

@@ -4,6 +4,8 @@ import { motion } from "framer-motion";
 
 import { ArrowButton } from "./ui/ArrowButton";
 import { GradientText } from "./ui/GradientText";
+import Link from "next/link";
+import { SMOOTH_SAIL_BASE_URL } from "@/data/constants";
 
 export function HomePageHero() {
   return (
@@ -26,9 +28,12 @@ export function HomePageHero() {
         </h1>
         <p className="font-semibold text-xl lg:text-2xl">
           Recently I built{" "}
-          <span className="font-raleway text-[1.7rem] font-light">
+          <Link
+            href={SMOOTH_SAIL_BASE_URL}
+            className="font-raleway text-[1.7rem] font-light hover:text-blue-400 transition duration-300"
+          >
             SmoothSail
-          </span>
+          </Link>
           , a feature flag management tool for decoupling deployment from
           release with user targeting capabilities.
         </p>

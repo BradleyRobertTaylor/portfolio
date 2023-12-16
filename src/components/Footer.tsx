@@ -18,7 +18,7 @@ export function Footer() {
           <Link
             target="_blank"
             href="/resume.pdf"
-            className="font-medium text-neutral-500 dark:text-neutral-400 hover:text-black dark:hover:text-white transition-colors duration-500"
+            className="font-medium text-neutral-500 dark:text-neutral-400 hover:text-black dark:hover:text-white transition-colors duration-300"
           >
             Resume
           </Link>
@@ -27,7 +27,7 @@ export function Footer() {
           <Link
             target="_blank"
             href={LINKED_IN_URL}
-            className="font-medium text-neutral-500 dark:text-neutral-400 hover:text-black dark:hover:text-white transition-colors duration-500"
+            className="font-medium text-neutral-500 dark:text-neutral-400 hover:text-black dark:hover:text-white transition-colors duration-300"
           >
             LinkedIn
           </Link>
@@ -36,7 +36,7 @@ export function Footer() {
           <Link
             target="_blank"
             href={GITHUB_URL}
-            className="font-medium text-neutral-500 dark:text-neutral-400 hover:text-black dark:hover:text-white transition-colors duration-500"
+            className="font-medium text-neutral-500 dark:text-neutral-400 hover:text-black dark:hover:text-white transition-colors duration-300"
           >
             Github
           </Link>
