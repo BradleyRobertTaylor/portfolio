@@ -30,7 +30,7 @@ export default function RootLayout({
       <body
         suppressHydrationWarning
         className={cn(
-          "max-w-[1980px] mx-auto min-h-screen bg-neutral-50 dark:bg-neutral-950 font-sans antialiased",
+          "relative max-w-[1980px] mx-auto min-h-screen bg-neutral-50 dark:bg-neutral-950 font-sans antialiased",
           fontSans.variable,
           raleway.variable,
         )}

@@ -1,7 +1,6 @@
-"use client";
-
 import { motion } from "framer-motion";
 
+import { usePreventScroll } from "react-aria";
 import { NavLinks } from "./NavLinks";
 import { ThemeToggle } from "./ThemeToggle";
 
@@ -20,6 +19,7 @@ const drawerVariants = {
 };
 
 export function SideDrawer({ onCloseDrawer }: { onCloseDrawer: () => void }) {
+  usePreventScroll();
   return (
     <motion.aside
       className="fixed right-0 top-0 max-w-[400px] w-[70%] z-30 h-screen bg-zinc-200 dark:bg-zinc-800"
