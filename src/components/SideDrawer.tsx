@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 
-import { usePreventScroll } from "react-aria";
 import { NavLinks } from "./NavLinks";
 import { ThemeToggle } from "./ThemeToggle";
+import { useLockScroll } from "@/hooks/useLockScreen";
 
 const drawerVariants = {
   drawerIsOpen: {
@@ -19,7 +19,8 @@ const drawerVariants = {
 };
 
 export function SideDrawer({ onCloseDrawer }: { onCloseDrawer: () => void }) {
-  usePreventScroll();
+  useLockScroll();
+
   return (
     <motion.aside
       className="fixed right-0 top-0 max-w-[400px] w-[70%] z-30 h-screen bg-zinc-200 dark:bg-zinc-800"
