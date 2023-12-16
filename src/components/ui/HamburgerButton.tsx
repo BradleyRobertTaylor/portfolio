@@ -1,38 +1,49 @@
-const path01Variants = {
-  open: { d: "M3.06061 2.99999L21.0606 21" },
-  closed: { d: "M0 9.5L24 9.5" },
-};
-
-const path02Variants = {
-  open: { d: "M3.00006 21.0607L21 3.06064" },
-  moving: { d: "M0 14.5L24 14.5" },
-  closed: { d: "M0 14.5L15 14.5" },
-};
+import { motion } from "framer-motion";
+import { Backdrop } from "./Backdrop";
+import {
+  path01Variants,
+  path02Variants,
+  useMenuContext,
+} from "@/providers/MenuAnimationProvider";
 
 interface HamburgerButtonProps {
-  handleDrawer: () => void;
+  onCloseDrawer: () => void;
+  onOpenDrawer: () => void;
+  isOpen: boolean;
 }
 
-export function HamburgerButton({ handleDrawer }: HamburgerButtonProps) {
+export function HamburgerButton({
+  isOpen,
+  onCloseDrawer,
+  onOpenDrawer,
+}: HamburgerButtonProps) {
+  const { path01Controls, path02Controls } = useMenuContext();
+
   return (
-    <button onClick={handleDrawer} className="relative z-50">
-      <svg
-        className="block w-8 stroke-neutral-950 dark:stroke-neutral-50"
-        viewBox="0 0 24 24"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
+    <>
+      <button
+        onClick={isOpen ? onCloseDrawer : onOpenDrawer}
+        className="relative z-50"
       >
-        <path
-          {...path01Variants.closed}
-          // animate={path01Controls}
-          // transition={{ duration: 0.2 }}
-        />
-        <path
-          {...path02Variants.closed}
-          // animate={path02Controls}
-          // transition={{ duration: 0.2 }}
-        />
-      </svg>
-    </button>
+        <svg
+          className="block w-8 stroke-neutral-950 dark:stroke-neutral-50"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <motion.path
+            {...path01Variants.closed}
+            animate={path01Controls}
+            transition={{ duration: 0.2 }}
+          />
+          <motion.path
+            {...path02Variants.closed}
+            animate={path02Controls}
+            transition={{ duration: 0.2 }}
+          />
+        </svg>
+      </button>
+      {isOpen && <Backdrop closeDrawer={onCloseDrawer} />}
+    </>
   );
 }

@@ -2,21 +2,13 @@
 
 import { useState } from "react";
 
-import {
-  AnimatePresence,
-  motion,
-  useMotionValueEvent,
-  useScroll,
-} from "framer-motion";
+import { motion, useMotionValueEvent, useScroll } from "framer-motion";
 
 import { DesktopNav } from "./DesktopNav";
 import { MobileNav } from "./MobileNav";
-import { Backdrop } from "./ui/Backdrop";
-import { SideDrawer } from "./SideDrawer";
 
 export function Header() {
   const [navIsHidden, setNavIsHidden] = useState(false);
-  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
   const { scrollY } = useScroll();
 
@@ -34,30 +26,15 @@ export function Header() {
     }
   });
 
-  const handleCloseDrawer = () => setIsDrawerOpen(false);
-  const handleOpenDrawer = () => setIsDrawerOpen(true);
-
   return (
-    <>
-      <motion.header
-        variants={navVariants}
-        animate={navIsHidden ? "hidden" : "visible"}
-        transition={{ ease: "easeOut", duration: 1 }}
-        className="w-full max-w-[1980px] z-30 px-9 py-4 md:px-24 md:py-10 fixed bg-neutral-50 dark:bg-neutral-950"
-      >
-        <DesktopNav />
-        <MobileNav
-          handleDrawer={isDrawerOpen ? handleCloseDrawer : handleOpenDrawer}
-        />
-        <AnimatePresence>
-          {isDrawerOpen && (
-            <>
-              <Backdrop closeDrawer={handleCloseDrawer} />
-              <SideDrawer />
-            </>
-          )}
-        </AnimatePresence>
-      </motion.header>
-    </>
+    <motion.header
+      variants={navVariants}
+      animate={navIsHidden ? "hidden" : "visible"}
+      transition={{ ease: "easeInOut", duration: 0.5 }}
+      className="w-full max-w-[1980px] z-30 px-9 py-4 md:px-24 md:py-10 fixed bg-neutral-50 dark:bg-neutral-950"
+    >
+      <DesktopNav />
+      <MobileNav />
+    </motion.header>
   );
 }

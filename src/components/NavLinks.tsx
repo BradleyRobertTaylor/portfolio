@@ -4,12 +4,16 @@ import { navigation } from "@/data/navigation";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 interface NavLinksProps {
   variant: "mobile" | "desktop";
+  onCloseDrawer?: () => void;
 }
 
-export function NavLinks({ variant }: NavLinksProps) {
+export function NavLinks({ variant, onCloseDrawer }: NavLinksProps) {
+  const router = useRouter();
+
   const mobileListStyles =
     "p-9 sm:p-24 flex h-full flex-col items-center justify-center gap-4";
 
@@ -31,6 +35,11 @@ export function NavLinks({ variant }: NavLinksProps) {
     },
   };
 
+  const handleMobileNavigation = (href: string) => {
+    router.push(href);
+    onCloseDrawer!();
+  };
+
   return (
     <nav className={cn(variant === "mobile" && "h-full")}>
       <ul
@@ -50,7 +59,18 @@ export function NavLinks({ variant }: NavLinksProps) {
               )}
               variants={drawerLink}
             >
-              <Link href={href}>{title}</Link>
+              {variant === "mobile" ? (
+                <Link
+                  href={href}
+                  onClick={() => {
+                    handleMobileNavigation(href);
+                  }}
+                >
+                  {title}
+                </Link>
+              ) : (
+                <Link href={href}>{title}</Link>
+              )}
             </motion.li>
           );
         })}
