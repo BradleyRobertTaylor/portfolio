@@ -30,7 +30,8 @@ export function HomePageHero() {
           Recently I built{" "}
           <Link
             href={SMOOTH_SAIL_BASE_URL}
-            className="font-raleway text-[1.7rem] font-light hover:text-blue-400 transition duration-300"
+            target="_blank"
+            className="font-raleway text-[1.7rem] font-light hover:text-[#23395A] transition duration-300"
           >
             SmoothSail
           </Link>
