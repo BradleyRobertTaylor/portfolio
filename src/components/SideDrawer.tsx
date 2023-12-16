@@ -23,7 +23,7 @@ export function SideDrawer({ onCloseDrawer }: { onCloseDrawer: () => void }) {
 
   return (
     <motion.aside
-      className="fixed right-0 top-0 max-w-[400px] w-[70%] z-30 h-screen bg-zinc-200 dark:bg-zinc-800"
+      className="fixed right-0 top-0 max-w-[400px] w-[70%] z-30 h-[100dvh] bg-zinc-200 dark:bg-zinc-800"
       initial="drawerIsClosed"
       animate="drawerIsOpen"
       variants={drawerVariants}
