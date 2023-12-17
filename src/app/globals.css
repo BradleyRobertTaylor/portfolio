@@ -6,6 +6,14 @@
   scroll-behavior: smooth !important;
 }
 
+body.lock-scroll {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
 /* mask for technology display */
 .mask {
   mask-image: linear-gradient(
