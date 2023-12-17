@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 import { NavLinks } from "./NavLinks";
 import { ThemeToggle } from "./ThemeToggle";
-import { useLockScroll } from "@/hooks/useLockScreen";
+import { useEffect } from "react";
 
 const drawerVariants = {
   drawerIsOpen: {
@@ -19,7 +19,12 @@ const drawerVariants = {
 };
 
 export function SideDrawer({ onCloseDrawer }: { onCloseDrawer: () => void }) {
-  useLockScroll();
+  useEffect(() => {
+    document.addEventListener("scroll", onCloseDrawer);
+    return () => {
+      document.removeEventListener("scroll", onCloseDrawer);
+    };
+  }, [onCloseDrawer]);
 
   return (
     <motion.aside
