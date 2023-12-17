@@ -58,11 +58,11 @@ export function BackgroundSection() {
           viewport={{ once: true, amount: 0.2 }}
           className="md:w-[70%] md:ml-auto pt-28 font-medium text-neutral-500 dark:text-neutral-400 text-sm"
         >
-          I&apos;m a professional musician, educator, and now full-stack
+          I&apos;m a professional musician and educator turned full stack
           software engineer. While learning to program, I focused on the
           fundamentals and how to approach problem solving. I draw upon my
           experience as a musician and educator to bring a unique perspective to
-          my work, infusing my creativity to find scalable solutions with my
+          my work, infusing my creativity to find efficient solutions with my
           passion for learning new technologies.
         </motion.p>
         <h3 className="md:w-[70%] md:ml-auto pt-28 font-extrabold text-4xl">

@@ -7,8 +7,8 @@ import { GradientText } from "./ui/GradientText";
 
 export function AboutPageHero() {
   return (
-    <section className="z-0 relative p-9 pt-28 md:p-24 md:pt-44 md:h-[100vh] flex flex-col">
-      <div className="flex flex-col column justify-around gap-12 md:w-[75%]">
+    <section className="z-0 relative p-9 pt-28 md:p-24 md:pt-44 flex flex-col">
+      <div className="flex flex-col column justify-around gap-12 lg:w-[75%]">
         <motion.h1
           initial={{ opacity: 0, x: -25 }}
           animate={{ opacity: 1, x: 0 }}

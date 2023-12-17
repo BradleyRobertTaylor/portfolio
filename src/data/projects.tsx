@@ -18,15 +18,15 @@ export const projects: Project[] = [
     alt: "ForRequests dashboard screenshot",
     title: "ForRequests",
     description:
-      "A RequestBin clone for testing and debugging webhooks and HTTP requests. Built using TypeScript, React, Express, and MongoDB. Deployed with Digital Ocean Droplet using PM2.",
+      "A RequestBin clone for testing and debugging webhooks and HTTP requests. Built using TypeScript, React, Express, and MongoDB.",
   },
   {
     id: 2,
     img: portfolioLight,
     alt: "Personal portfolio screenshot",
-    title: "The Site You're On",
+    title: "Personal Portfolio",
     description:
-      "This is my personal portfolio site for showcasing my projects. Built with Next.js, TypeScript, and Framer Motion for most animations.",
+      "This is my personal portfolio site for showcasing my projects. Built with Next.js, TypeScript, Framer Motion, and Shadcn UI.",
   },
   {
     id: 3,

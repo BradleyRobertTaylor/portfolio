@@ -23,7 +23,7 @@ export function SmoothSailSection() {
   const y = useParallax(scrollYProgress, 30);
 
   return (
-    <section id="projects" className="p-9 py-28 flex flex-col gap-5">
+    <section id="projects" className="px-9 pt-28 pb-12 flex flex-col gap-5">
       <div className="flex flex-col items-center">
         <Link
           target="_blank"
@@ -49,9 +49,9 @@ export function SmoothSailSection() {
           />
         </Link>
       </div>
-      <div className="flex flex-col md:flex-row max-w-5xl mx-auto gap-10 items-center">
-        <div className="flex flex-col gap-2 md:flex-row md:gap-10">
-          <div className="flex flex-col gap-2 md:w-2/3 md:flex-row md:gap-24">
+      <div className="flex flex-col lg:flex-row max-w-5xl mx-auto gap-10 items-center">
+        <div className="flex flex-col gap-2 lg:flex-row lg:gap-10">
+          <div className="flex flex-col gap-2 lg:w-2/3 lg:flex-row lg:gap-24">
             <motion.div
               initial={{ opacity: 0, x: 25 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -115,7 +115,7 @@ export function SmoothSailSection() {
               </Link>
             </div>
             <div>
-              <div className="flex items-end justify-between md:gap-10">
+              <div className="flex items-end justify-between lg:gap-10">
                 <div>
                   <p className="font-medium">GitHub</p>
                   <Link

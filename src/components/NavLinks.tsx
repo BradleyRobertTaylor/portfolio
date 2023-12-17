@@ -18,7 +18,7 @@ export function NavLinks({ variant, onCloseDrawer }: NavLinksProps) {
     "p-9 sm:p-24 flex h-full flex-col items-center justify-center gap-4";
 
   const mobileListItemStyles =
-    "w-full text-right text-2xl uppercase text-neutral-700 dark:text-neutral-300 hover:text-black dark:hover:text-white transition-colors";
+    "w-full text-right text-xl uppercase text-neutral-700 dark:text-neutral-300 hover:text-black dark:hover:text-white transition-colors";
 
   const desktopListStyles = "flex gap-12";
 

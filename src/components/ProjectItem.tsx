@@ -5,7 +5,7 @@ import Image from "next/image";
 export function ProjectItem({ img, alt, title, description }: Project) {
   return (
     <div className="flex flex-col items-center gap-4">
-      <motion.a
+      <motion.div
         initial={{ opacity: 0, x: 25 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{
@@ -13,9 +13,7 @@ export function ProjectItem({ img, alt, title, description }: Project) {
           duration: 1,
         }}
         viewport={{ once: true, amount: 1 }}
-        target="_blank"
-        href="#"
-        className="relative rounded-3xl p-4 bg-neutral-200 hover:bg-neutral-300 dark:bg-neutral-800 dark:hover:bg-neutral-700 grid place-items-center transition-colors duration-300"
+        className="relative rounded-3xl p-4 bg-neutral-200 dark:bg-neutral-800 grid place-items-center transition-colors duration-300"
       >
         <Image
           src={img}
@@ -23,7 +21,7 @@ export function ProjectItem({ img, alt, title, description }: Project) {
           alt={alt}
           className="rounded-xl aspect-video"
         />
-      </motion.a>
+      </motion.div>
       <motion.div
         initial={{ opacity: 0, x: 25 }}
         whileInView={{ opacity: 1, x: 0 }}
