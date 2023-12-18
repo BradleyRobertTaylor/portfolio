@@ -3,7 +3,6 @@
 import { motion } from "framer-motion";
 
 import { ArrowButton } from "./ui/ArrowButton";
-import { GradientText } from "./ui/GradientText";
 import Link from "next/link";
 import { SMOOTH_SAIL_BASE_URL } from "@/data/constants";
 
@@ -18,15 +17,16 @@ export function HomePageHero() {
           duration: 1,
           delay: 0.5,
         }}
-        className="flex flex-col column justify-around gap-12 md:max-w-[70%]"
+        className="flex flex-col column justify-around gap-12 md:max-w-[80%]"
       >
-        <h1 className="font-black text-5xl lg:text-[4rem] xl:text-[5rem] leading-[1.1em] tracking-tight">
+        <h1 className="font-extrabold text-5xl lg:text-[4rem] 2xl:text-[5rem] leading-[1.1em] tracking-tight">
           Hello <span className="md:hidden">-</span>
           <span className="hidden md:inline">&#8212;</span> I&apos;m Brad.
-          <br />A Las Vegas - based{" "}
-          <GradientText>Software Engineer.</GradientText>
+          <br className="hidden md:inline" /> A Las Vegas - based{" "}
+          <br className="hidden md:inline" />
+          Software Engineer.
         </h1>
-        <p className="font-semibold text-xl lg:text-2xl">
+        <p className="font-semibold text-xl lg:text-2xl text-neutral-500 dark:text-neutral-300">
           Recently I built{" "}
           <Link
             href={SMOOTH_SAIL_BASE_URL}
@@ -36,7 +36,7 @@ export function HomePageHero() {
             SmoothSail
           </Link>
           , a feature flag management tool for decoupling deployment from
-          release with user targeting capabilities.
+          release.
         </p>
       </motion.div>
       <motion.div
@@ -45,7 +45,7 @@ export function HomePageHero() {
         transition={{ ease: [0.1, 0.25, 0.3, 1], duration: 1, delay: 1 }}
         className="absolute bottom-6 right-9 lg:bottom-24 lg:right-24"
       >
-        <ArrowButton animate size="large" href="/#projects" />
+        <ArrowButton animate href="/#projects" />
       </motion.div>
     </section>
   );

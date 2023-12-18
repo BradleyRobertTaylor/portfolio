@@ -129,7 +129,6 @@ export function SmoothSailSection() {
                 <ArrowButton
                   className="w-12"
                   target="_blank"
-                  size="base"
                   rotateArrow
                   href={SMOOTH_SAIL_CASE_STUDY_URL}
                 />
