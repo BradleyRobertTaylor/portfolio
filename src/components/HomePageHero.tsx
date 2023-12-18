@@ -17,16 +17,16 @@ export function HomePageHero() {
           duration: 1,
           delay: 0.5,
         }}
-        className="flex flex-col column justify-around gap-12 md:max-w-[80%]"
+        className="flex flex-col column justify-around gap-12 md:max-w-[70%]"
       >
-        <h1 className="font-extrabold text-5xl lg:text-[4rem] 2xl:text-[5rem] leading-[1.1em] tracking-tight">
+        <h1 className="font-extrabold text-5xl lg:text-[4rem] xl:text-[5rem] leading-[1.1em] tracking-tight">
           Hello <span className="md:hidden">-</span>
           <span className="hidden md:inline">&#8212;</span> I&apos;m Brad.
           <br className="hidden md:inline" /> A Las Vegas - based{" "}
           <br className="hidden md:inline" />
           Software Engineer.
         </h1>
-        <p className="font-semibold text-xl lg:text-2xl text-neutral-500 dark:text-neutral-300">
+        <p className="lg:w-[90%] 2xl:w-[70%] font-semibold text-xl lg:text-2xl text-neutral-500 dark:text-neutral-300">
           Recently I built{" "}
           <Link
             href={SMOOTH_SAIL_BASE_URL}

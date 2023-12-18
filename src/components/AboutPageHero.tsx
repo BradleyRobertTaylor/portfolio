@@ -16,7 +16,7 @@ export function AboutPageHero() {
             duration: 1,
             delay: 0.5,
           }}
-          className="font-bold text-4xl md:text-6xl 2xl:text-7xl leading-[2em] tracking-tight"
+          className="mb-14 md:mb-0 font-bold text-3xl md:text-6xl 2xl:text-7xl leading-[2em] tracking-tight"
         >
           I have years of experience in the TypeScript, JavaScript, and Ruby
           ecosystems.
