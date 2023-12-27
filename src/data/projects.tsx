@@ -1,6 +1,6 @@
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
-import forRequestsLight from "../../public/for-requests-light.png";
-import portfolioLight from "../../public/portfolio-light.png";
+import forRequestsScreenshot from "../../public/for-requests-light.png";
+import portfolioScreenshot from "../../public/portfolio-light.png";
 import todosScreenshot from "../../public/todos-screenshot.png";
 
 export interface Project {
@@ -14,15 +14,15 @@ export interface Project {
 export const projects: Project[] = [
   {
     id: 1,
-    img: forRequestsLight,
+    img: forRequestsScreenshot,
     alt: "ForRequests dashboard screenshot",
     title: "ForRequests",
     description:
-      "A RequestBin clone for testing and debugging webhooks and HTTP requests. Built using TypeScript, React, Express, and MongoDB.",
+      "A RequestBin like web application for testing and debugging webhooks and HTTP requests. Built using TypeScript, React, Express, and PostgreSQL. Deployed to DO Droplet.",
   },
   {
     id: 2,
-    img: portfolioLight,
+    img: portfolioScreenshot,
     alt: "Personal portfolio screenshot",
     title: "Personal Portfolio",
     description:
