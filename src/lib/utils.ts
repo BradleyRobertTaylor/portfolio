@@ -5,9 +5,9 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
-export const toHTMLParagraphs = (text: string) => {
+export function toHTMLParagraphs(text: string) {
   return text
     .split("\n")
     .map((paragraph) => `<p>${paragraph}</p>`)
     .join("");
-};
+}

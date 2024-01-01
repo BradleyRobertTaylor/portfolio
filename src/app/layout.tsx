@@ -2,11 +2,10 @@ import type { Metadata } from "next";
 import { Inter as FontSans, Raleway } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
-import { ThemeProvider } from "@/providers/ThemeProvider";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { MenuAnimationProvider } from "@/providers/MenuAnimationProvider";
 import { Toaster } from "@/components/ui/toaster";
+import { Providers } from "@/providers";
 
 const fontSans = FontSans({ subsets: ["latin"], variable: "--font-sans" });
 
@@ -35,14 +34,12 @@ export default function RootLayout({
           raleway.variable,
         )}
       >
-        <ThemeProvider>
-          <MenuAnimationProvider>
-            <Header />
-            {children}
-            <Toaster />
-            <Footer />
-          </MenuAnimationProvider>
-        </ThemeProvider>
+        <Providers>
+          <Header />
+          {children}
+          <Toaster />
+          <Footer />
+        </Providers>
       </body>
     </html>
   );
