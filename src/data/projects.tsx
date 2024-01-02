@@ -2,6 +2,7 @@ import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import forRequestsScreenshot from "../../public/for-requests-light.png";
 import portfolioScreenshot from "../../public/portfolio-light.png";
 import todosScreenshot from "../../public/todos-screenshot.png";
+import musicLessonPlannerScreenshot from "../../public/music-lesson-planner.png";
 
 export interface Project {
   id: number;
@@ -35,5 +36,13 @@ export const projects: Project[] = [
     title: "Todos",
     description:
       "Your classic application for creating, updating, and deleting todos with dynamic filtering by date and completed. Built with Node.js, Express, Handlebars, and SQLite.",
+  },
+  {
+    id: 4,
+    img: musicLessonPlannerScreenshot,
+    alt: "Music lesson planner screenshot",
+    title: "Music Lesson Planner",
+    description:
+      "A web application for scheduling music lessons with a private teacher. Each Built with Ruby, Sinatra, ERB, and PostgreSQL.",
   },
 ];
