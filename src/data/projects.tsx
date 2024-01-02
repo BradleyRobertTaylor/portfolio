@@ -43,6 +43,6 @@ export const projects: Project[] = [
     alt: "Music lesson planner screenshot",
     title: "Music Lesson Planner",
     description:
-      "A web application for scheduling music lessons with a private teacher. Each Built with Ruby, Sinatra, ERB, and PostgreSQL.",
+      "A web application for scheduling music lessons with a private teacher. Built with Ruby, Sinatra, ERB, and PostgreSQL.",
   },
 ];
