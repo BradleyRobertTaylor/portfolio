@@ -10,37 +10,17 @@ import {
   SMOOTH_SAIL_GITHUB_URL,
 } from "@/data/constants";
 import { ArrowButton } from "./ui/ArrowButton";
-import { MotionValue, useScroll, useTransform, motion } from "framer-motion";
-import { useRef } from "react";
-
-const useParallax = (value: MotionValue<number>, distance: number) => {
-  return useTransform(value, [0, 1], [-distance, distance]);
-};
+import { motion } from "framer-motion";
 
 export function SmoothSailSection() {
-  const ref = useRef(null);
-  const { scrollYProgress } = useScroll({ target: ref });
-  const y = useParallax(scrollYProgress, 30);
-
   return (
-    <section id="projects" className="px-9 pt-28 pb-12 flex flex-col gap-5">
+    <section id="projects" className="px-9 pb-12 pt-4 flex flex-col gap-5">
       <div className="flex flex-col items-center">
         <Link
           target="_blank"
           href={SMOOTH_SAIL_BASE_URL}
-          className="relative max-w-5xl rounded-3xl p-4 md:p-16 bg-neutral-200 hover:bg-neutral-300 dark:bg-neutral-800 dark:hover:bg-neutral-700 grid place-items-center transition-colors duration-500"
+          className="max-w-5xl rounded-3xl p-4 md:p-16 bg-neutral-200 hover:bg-neutral-300 dark:bg-neutral-800 dark:hover:bg-neutral-700 grid place-items-center transition-colors duration-500"
         >
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 2 }}
-            viewport={{ once: true, amount: 1 }}
-            ref={ref}
-            style={{ y }}
-            className="-z-10 absolute text-[9.688rem] md:text-[15rem] md:-top-44 font-black tracking-[-4px] -top-32 left-5"
-          >
-            01
-          </motion.div>
           <Image
             src={smoothSailDashboard}
             priority
@@ -59,7 +39,7 @@ export function SmoothSailSection() {
                 ease: [0.1, 0.25, 0.3, 1],
                 duration: 1,
               }}
-              viewport={{ once: true, amount: 1 }}
+              viewport={{ once: true, amount: 0.3 }}
               className="flex gap-1 font-bold items-start text-[28px] tracking-[-0.4px]"
             >
               <Link
@@ -78,7 +58,7 @@ export function SmoothSailSection() {
                 duration: 1,
                 delay: 0.2,
               }}
-              viewport={{ once: true, amount: 1 }}
+              viewport={{ once: true, amount: 0.3 }}
             >
               <p className="font-medium text-neutral-500 dark:text-neutral-400 text-sm pb-2">
                 SmoothSail is a feature flag management tool designed for
@@ -101,7 +81,7 @@ export function SmoothSailSection() {
               duration: 1,
               delay: 0.4,
             }}
-            viewport={{ once: true, amount: 1 }}
+            viewport={{ once: true, amount: 0.3 }}
             className="flex flex-col gap-2"
           >
             <div>

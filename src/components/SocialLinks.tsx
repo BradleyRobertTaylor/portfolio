@@ -32,19 +32,13 @@ export function SocialLinks() {
       </Link>
       <Link target="_blank" href="/resume.pdf">
         <svg
-          className="w-6 stroke-neutral-500 fill-neutral-50 hover:stroke-black dark:stroke-neutral-400 dark:fill-neutral-950 dark:hover:stroke-white transition-colors duration-300"
           xmlns="http://www.w3.org/2000/svg"
+          className="w-6 stroke-neutral-500 fill-neutral-50 hover:stroke-black dark:stroke-neutral-400 dark:fill-neutral-950 dark:hover:stroke-white transition-colors duration-300"
           viewBox="0 0 24 24"
         >
-          <g
-            fill="none"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-          >
-            <path d="M14 3v4a1 1 0 001 1h4"></path>
-            <path d="M17 21H7a2 2 0 01-2-2V5a2 2 0 012-2h7l5 5v11a2 2 0 01-2 2z"></path>
-            <path d="M11 12.5a1.5 1.5 0 00-3 0v3a1.5 1.5 0 003 0m2-4.5l1.5 6 1.5-6"></path>
+          <g fill="none" stroke-linejoin="round" stroke-width="2">
+            <path d="M5 20V4a1 1 0 0 1 1-1h6.172a2 2 0 0 1 1.414.586l4.828 4.828A2 2 0 0 1 19 9.828V20a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1z" />
+            <path d="M12 3v6a1 1 0 0 0 1 1h6" />
           </g>
         </svg>
       </Link>

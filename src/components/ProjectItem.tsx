@@ -12,7 +12,7 @@ export function ProjectItem({ img, alt, title, description }: Project) {
           ease: [0.1, 0.25, 0.3, 1],
           duration: 1,
         }}
-        viewport={{ once: true, amount: 1 }}
+        viewport={{ once: true, amount: 0.5 }}
         className="relative rounded-3xl p-4 bg-neutral-200 dark:bg-neutral-800 grid place-items-center transition-colors duration-300"
       >
         <Image
@@ -29,7 +29,7 @@ export function ProjectItem({ img, alt, title, description }: Project) {
           ease: [0.1, 0.25, 0.3, 1],
           duration: 1,
         }}
-        viewport={{ once: true, amount: 1 }}
+        viewport={{ once: true, amount: 0.5 }}
       >
         <h4 className="font-bold">{title}</h4>
         <p className="font-medium text-neutral-500 dark:text-neutral-400 text-sm pb-2">

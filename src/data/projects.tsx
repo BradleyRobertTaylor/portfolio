@@ -30,19 +30,19 @@ export const projects: Project[] = [
       "This is my personal portfolio site for showcasing my projects. Built with Next.js, TypeScript, Framer Motion, and Shadcn UI.",
   },
   {
-    id: 3,
-    img: todosScreenshot,
-    alt: "Todos project screenshot",
-    title: "Todos",
-    description:
-      "Your classic application for creating, updating, and deleting todos with dynamic filtering by date and completed. Built with Node.js, Express, Handlebars, and SQLite.",
-  },
-  {
     id: 4,
     img: musicLessonPlannerScreenshot,
     alt: "Music lesson planner screenshot",
     title: "Music Lesson Planner",
     description:
       "A web application for scheduling music lessons with a private teacher. Built with Ruby, Sinatra, ERB, and PostgreSQL.",
+  },
+  {
+    id: 3,
+    img: todosScreenshot,
+    alt: "Todos project screenshot",
+    title: "Todos",
+    description:
+      "Your classic application for creating, updating, and deleting todos with dynamic filtering by date and completed. Built with Node.js, Express, Handlebars, and SQLite.",
   },
 ];
