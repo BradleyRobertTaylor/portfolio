@@ -36,7 +36,7 @@ export function SocialLinks() {
           className="w-6 stroke-neutral-500 fill-neutral-50 hover:stroke-black dark:stroke-neutral-400 dark:fill-neutral-950 dark:hover:stroke-white transition-colors duration-300"
           viewBox="0 0 24 24"
         >
-          <g fill="none" stroke-linejoin="round" stroke-width="2">
+          <g fill="none" strokeLinejoin="round" strokeWidth="2">
             <path d="M5 20V4a1 1 0 0 1 1-1h6.172a2 2 0 0 1 1.414.586l4.828 4.828A2 2 0 0 1 19 9.828V20a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1z" />
             <path d="M12 3v6a1 1 0 0 0 1 1h6" />
           </g>
