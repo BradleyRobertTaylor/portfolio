@@ -19,13 +19,17 @@ export function HomePageHero() {
         }}
         className="flex flex-col column justify-around gap-12 md:max-w-[70%]"
       >
-        <h1 className="font-extrabold text-5xl lg:text-[4rem] xl:text-[5rem] leading-[1.1em] tracking-tight">
+        <h1 className="sr-only">
+          Hey, I&apos;m Bradley Taylor. a full stack software engineer. I&apos;m
+          one of the creators of SmoothSail, a feature flag management tool.
+        </h1>
+        <p className="font-extrabold text-5xl lg:text-[4rem] xl:text-[5rem] leading-[1.1em] tracking-tight">
           Hello <span className="md:hidden">-</span>
           <span className="hidden md:inline">&#8212;</span> I&apos;m Brad.
           <br className="hidden md:inline" /> A Las Vegas - based{" "}
           <br className="hidden md:inline" />
           Software Engineer.
-        </h1>
+        </p>
         <p className="lg:w-[90%] 2xl:w-[70%] font-semibold text-xl lg:text-2xl text-neutral-500 dark:text-neutral-300">
           Recently I built{" "}
           <Link
